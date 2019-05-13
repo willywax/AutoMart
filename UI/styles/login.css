@@ -52,7 +52,7 @@ h3{
 .loginBox input[type="email"]:focus,
 .loginBox input[type="password"]:focus
 {
-    border-bottom: 2px solid #66cc66;
+    border-bottom: 2px solid #47cba1;
 }
 
 .loginBox input[type="submit"]
@@ -61,7 +61,7 @@ h3{
     outline: none;
     height: 40px;
     font-size: 16px;
-    background: #66cc66;
+    background: #47cba1;
     border-radius: 20px;
     cursor: pointer;
     border-color: green;
@@ -71,7 +71,7 @@ h3{
 {
     color: #262626;
     font-size: 14px;
-    color: #66cc66;
+    color: #47cba1;
     text-decoration: none;
     text-align: center;
 }
