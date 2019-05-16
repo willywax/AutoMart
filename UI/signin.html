@@ -19,7 +19,7 @@
             <div class="inputbox">
                 <input type="password" name="" placeholder="Enter password">
             </div>
-            <input type="submit" name="" value="LOGIN">
+            <input type="submit" name="" id="logInBtn" value="LOGIN">
         </form>
         <ul>
             <li>Forgot <a href="#">Username/ Password</a></li>
@@ -27,4 +27,11 @@
         </ul>
     </div>
 </body>
+
+<script>
+    const login_btn = document.getElementById('logInBtn');
+    login_btn.addEventListener('click',function(){
+        window.location.replace('.')
+    })
+</script>
 </html>
