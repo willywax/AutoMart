@@ -26,12 +26,6 @@ body {
     background-color: #47cba1;
 }
 
-.radio-group input[type=radio]:checked + .radio-group {
-   background-color: red;
-
-   
-}
-
 .radio-group label {
     cursor: pointer;
 }
