@@ -54,26 +54,26 @@ h3{
 .loginBox input[type="password"]:focus,
 .loginBox input[type="text"]:focus
 {
-    border-bottom: 2px solid #47cba1;
+    border-bottom: 2px solid rgb(243,74,11);
 }
 
-.loginBox input[type="submit"]
+#logInBtn
 {
     border: none;
     outline: none;
     height: 40px;
     font-size: 16px;
-    background: #47cba1;
     border-radius: 20px;
     cursor: pointer;
-    border-color: green;
+    background: rgb(243,74,11);
+    width: 100%;
 }
 
 .loginBox a 
 {
     color: #262626;
     font-size: 14px;
-    color: #47cba1;
+    color: rgb(243,74,11);
     text-decoration: none;
     text-align: center;
 }

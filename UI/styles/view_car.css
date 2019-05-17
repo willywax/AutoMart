@@ -133,16 +133,30 @@ section:nth-child(3){
 }
 
 
-input[type=submit]{
+#buyBtn {
     border: none;
     outline: none;
     height: 40px;
     width: 120px;
     font-size: 16px;
     cursor: pointer;
-    border-color: green;
+    background: rgb(243,74,11);
     margin-top: 20px;
     font-weight: bold;
+    color: white;
+  }
+
+  #reportBtn{
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    cursor: pointer;
+    background: green;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
   }
 
   .danger {
