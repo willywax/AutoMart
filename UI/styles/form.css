@@ -103,14 +103,11 @@ input[type=text]{
 
 
   #logInBtn{
-    border: none;
-    outline: none;
-    height: 40px;
     width: 120px;
-    font-size: 16px;
-    background: #47cba1;
-    cursor: pointer;
-    border-color: green;
-    margin-top: 20px;
+    height: 40px;
+    color: white;
     font-weight: bold;
+    font-size: 13px;
+    margin-right: 20px;
+    background: rgb(243,74,11);
   }

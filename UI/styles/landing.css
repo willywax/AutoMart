@@ -17,10 +17,13 @@ body {
 
 header {
     grid-area: header;
-    background-color:black;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
-
 main {
     grid-area: main;
     width: 90%;
@@ -186,19 +189,23 @@ footer {
     border-radius: 5px;
 }
 
-.custom-select{
-    height: 29px;
-    overflow: hidden;
-    width: 200px;
-    background: transparent;
-    font-size: 14px;
-    padding: 5px; /* If you add too much padding here, the options won't show in IE */
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-
+/**** Nav ***/
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    margin: 5px;
+}
+nav span {
+    margin-left: 3px solid black;
+    color: black;
 
 }
+nav a:hover{
+    border-bottom: 3px solid rgb(243,74,11);
+}
+
+
 /**** Removing Scroll Bar **/
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -216,6 +223,29 @@ footer {
         grid-auto-rows: 500px;
         grid-gap: 30px;
         justify-content: center;
+    }
+
+    header {
+        grid-area: header;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+    }
+
+    nav {
+        width: 20%;
+        text-align: left;
+    }
+
+
+    nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 19px;
+        margin: 10px;
     }
 
     .filter-data {
