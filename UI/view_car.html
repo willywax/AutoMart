@@ -8,6 +8,7 @@
 
     <link href="./styles/view_car.css" type="text/css" rel="stylesheet">
     <link href="./styles/form.css" type="text/css" rel="stylesheet">
+    <link href="./styles/gallery.css" type="text/css" rel="stylesheet">
 
     <title>AutoMart</title>
 </head>
@@ -25,9 +26,42 @@
         </header>
         <main class="main">
             <div class="main-cards">
-                <section></section>
+                <section>
+                    <div class="image-container">
+                        <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
+                        <img id="expandedImg" src="./images/camaro.jpg" alt="Cool Car">
+                        <div id="imageText">
+                            Cool Cars
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
+                        </div>
+                        <div class="column">
+                            <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
+                        </div>
+                    </div>
+
+                </section>
                 <section>
                     <h3>Details</h3>
+                    <hr>
                     <div class="details">
                         <div class="data-forms">
                             <label>Make</label>
@@ -61,7 +95,7 @@
                             <label>Location</label>
                             <span>Mwanza</span>
                         </div>
-
+                        
                         <h3>Description</h3>
                         <p>Best Car For the Price</p>
                     </div>
@@ -82,7 +116,7 @@
             </div>
         </main>
     </div>
-
+<script src="./js/gallery.js"></script>
 </body>
 
 </html>
