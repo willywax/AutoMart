@@ -107,13 +107,13 @@ section {
     border: 1px solid rgb(136, 136, 136);
 }
 section:first-child {
-    height: 350px;
+    height: 270px;
     border-bottom: none;
     border: none;
 }
 
 section:nth-child(2){
-    height: 400px;
+    height: 450px;
 
     /* padding-bottom:10px;  */
 
