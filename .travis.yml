@@ -4,6 +4,7 @@ node_js:
   - node
 
 before_install:
+  - cd API
   - npm ci
 
 script:
