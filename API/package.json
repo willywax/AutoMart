@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nyc mocha ./test/test.js --timeout 20000 --exit",
     "coverage": "nyc --reporter=lcov mocha",
     "coveralls":"nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint '**/*.js'",
