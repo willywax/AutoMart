@@ -14,19 +14,19 @@ class User {
     this.is_admin = isAdmin;
   }
 
-  get firstName() {
+  get first_name() {
     return this._first_name;
   }
 
-  set firstName(value) {
-    this.first_name = value;
+  set first_name(value) {
+    this._first_name = value;
   }
 
-  get lastName() {
+  get last_name() {
     return this._last_name;
   }
 
-  set lastName(value) {
+  set last_name(value) {
     this._last_name = value;
   }
 
@@ -82,7 +82,9 @@ class User {
     userData.push(user);
   }
 
-  static findUser(user) {}
+  static getUsers() {
+    return userData;
+  }
 }
 
 module.exports = User;
