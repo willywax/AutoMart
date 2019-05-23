@@ -1,62 +1,75 @@
 const bcrypt = require('bcrypt');
+const uuid = require('uuid');
 
 // const static userData = [];
 const userData = [];
 
 class User {
   constructor(firstName, lastName, password, email, address, isAdmin) {
-    // this.id = createId();
+    this.id = this.generateId();
     this.first_name = firstName;
     this.last_name = lastName;
-    this.password = password;
+    this.password = this.encrypt(password);
     this.email = email;
     this.address = address;
     this.is_admin = isAdmin;
   }
 
-  get first_name() {
-    return this._first_name;
-  }
+  // get _id(){
+  //   return this.id;
+  // }
 
-  set first_name(value) {
-    this._first_name = value;
-  }
+  // set _id(value){
+  //   this.id = value;
+  // }
 
-  get last_name() {
-    return this._last_name;
-  }
+  // get _first_name() {
+  //   return this.first_name;
+  // }
 
-  set last_name(value) {
-    this._last_name = value;
-  }
+  // set _first_name(value) {
+  //   this.first_name = value;
+  // }
 
-  get password() {
-    return this._password;
-  }
+  // get _last_name() {
+  //   return this.last_name;
+  // }
 
-  set password(value) {
-    this._password = this.encrypt(value);
-  }
+  // set _last_name(value) {
+  //   this.last_name = value;
+  // }
 
-  get email() {
-    return this._email;
-  }
+  // get _password() {
+  //   return this.password;
+  // }
 
-  set email(value) {
-    this._email = value;
-  }
+  // set _password(value) {
+  //   this.password = this.encrypt(value);
+  // }
 
-  get address() {
-    return this._address;
-  }
+  // get _email() {
+  //   return this.email;
+  // }
 
-  set address(value) {
-    this._address = value;
-  }
+  // set _email(value) {
+  //   this.email = value;
+  // }
+
+  // get _address() {
+  //   return this.address;
+  // }
+
+  // set _address(value) {
+  //   this.address = value;
+  // }
 
   encrypt(value) {
     const hash = bcrypt.hashSync(value, 10);
     return hash;
+  }
+
+  generateId() {
+    return uuid.v1();
   }
 
   static decrypt(hash, value) {
@@ -66,24 +79,53 @@ class User {
     return false;
   }
 
-  static logInUser(savedUser, authenticatingUser) {
-    if (savedUser.email === authenticatingUser.email) {
-      const result = this.decrypt(savedUser.password, authenticatingUser.password);
-      console.log(`Result is ${result}`);
+  static logInUser(authenticatingUser) {
+    const user = this.findUser(authenticatingUser);
+    console.log(user);
+    let response = {
+      authenticated: false,
+      data: null,
+    };
+    if (user !== null) {
+      const result = this.decrypt(user.password, authenticatingUser.password);
+
+      console.log(`Result${result}`);
       if (result) {
-        return true;
+        response = {
+          authenticated: true,
+          data: user,
+        };
       }
-      return false;
+    } else {
+      response = {
+        authenticated: false,
+        data: 'Incorect Username or Password',
+      };
     }
-    return false;
+    return response;
   }
 
   static saveUser(user) {
     userData.push(user);
+
+    // Return last saved Record
+    return userData[userData.length - 1];
   }
 
   static getUsers() {
     return userData;
+  }
+
+  static findUser(user) {
+    console.log(userData.length);
+    const found = false;
+    for (let i = 0; i < userData.length; i++) {
+      console.log(userData[i]);
+      if (userData[i].email === user.email) {
+        return userData[i];
+      }
+    }
+    return null;
   }
 }
 
