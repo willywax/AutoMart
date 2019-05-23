@@ -6,7 +6,7 @@
   "scripts": {
     "test": "nyc mocha ./test/test.js --timeout 20000 --exit",
     "coverage": "nyc --reporter=lcov mocha",
-    "coveralls":"nyc report --reporter=text-lcov | coveralls",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write"
   },
@@ -25,7 +25,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.0",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.3",
