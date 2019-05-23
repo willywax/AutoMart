@@ -81,7 +81,7 @@ class User {
 
   static logInUser(authenticatingUser) {
     const user = this.findUser(authenticatingUser);
-    console.log(user);
+
     let response = {
       authenticated: false,
       data: null,
@@ -89,7 +89,6 @@ class User {
     if (user !== null) {
       const result = this.decrypt(user.password, authenticatingUser.password);
 
-      console.log(`Result${result}`);
       if (result) {
         response = {
           authenticated: true,
@@ -117,10 +116,8 @@ class User {
   }
 
   static findUser(user) {
-    console.log(userData.length);
     const found = false;
     for (let i = 0; i < userData.length; i++) {
-      console.log(userData[i]);
       if (userData[i].email === user.email) {
         return userData[i];
       }

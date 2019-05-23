@@ -31,7 +31,6 @@ exports.login = (req, res, next) => {
   };
 
   const response = User.logInUser(user);
-  console.log(response);
 
   if (response.authenticated) {
     const token = jwt.sign({ userId: user.id }, 'RANDOM_TOKEN', { expiresIn: '24h' });
