@@ -4,8 +4,11 @@ node_js:
   - node
 
 before_install:
+  - cd API
   - npm ci
 
 script:
   - yarn test
 
+after_success:
+  - yarn coveralls
