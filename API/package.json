@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "nyc --reporter=lcov mocha",
+    "coveralls":"nyc report --reporter=text-lcov | coveralls",
     "lint": "eslint '**/*.js'",
     "lint:fix": "prettier-eslint '**/*.js' --write"
   },
