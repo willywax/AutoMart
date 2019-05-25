@@ -1,62 +1,27 @@
 const bcrypt = require('bcrypt');
+const uuid = require('uuid');
 
 // const static userData = [];
 const userData = [];
 
 class User {
   constructor(firstName, lastName, password, email, address, isAdmin) {
-    // this.id = createId();
+    this.id = this.generateId();
     this.first_name = firstName;
     this.last_name = lastName;
-    this.password = password;
+    this.password = this.encrypt(password);
     this.email = email;
     this.address = address;
     this.is_admin = isAdmin;
   }
 
-  get first_name() {
-    return this._first_name;
-  }
-
-  set first_name(value) {
-    this._first_name = value;
-  }
-
-  get last_name() {
-    return this._last_name;
-  }
-
-  set last_name(value) {
-    this._last_name = value;
-  }
-
-  get password() {
-    return this._password;
-  }
-
-  set password(value) {
-    this._password = this.encrypt(value);
-  }
-
-  get email() {
-    return this._email;
-  }
-
-  set email(value) {
-    this._email = value;
-  }
-
-  get address() {
-    return this._address;
-  }
-
-  set address(value) {
-    this._address = value;
-  }
-
   encrypt(value) {
     const hash = bcrypt.hashSync(value, 10);
     return hash;
+  }
+
+  generateId() {
+    return uuid.v1();
   }
 
   static decrypt(hash, value) {
@@ -66,24 +31,50 @@ class User {
     return false;
   }
 
-  static logInUser(savedUser, authenticatingUser) {
-    if (savedUser.email === authenticatingUser.email) {
-      const result = this.decrypt(savedUser.password, authenticatingUser.password);
-      console.log(`Result is ${result}`);
+  static logInUser(authenticatingUser) {
+    const user = this.findUser(authenticatingUser);
+
+    let response = {
+      authenticated: false,
+      data: null,
+    };
+    if (user !== null) {
+      const result = this.decrypt(user.password, authenticatingUser.password);
+
       if (result) {
-        return true;
+        response = {
+          authenticated: true,
+          data: user,
+        };
       }
-      return false;
+    } else {
+      response = {
+        authenticated: false,
+        data: 'Incorect Username or Password',
+      };
     }
-    return false;
+    return response;
   }
 
   static saveUser(user) {
     userData.push(user);
+
+    // Return last saved Record
+    return userData[userData.length - 1];
   }
 
   static getUsers() {
     return userData;
+  }
+
+  static findUser(user) {
+    const found = false;
+    for (let i = 0; i < userData.length; i++) {
+      if (userData[i].email === user.email) {
+        return userData[i];
+      }
+    }
+    return null;
   }
 }
 
