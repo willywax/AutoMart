@@ -15,54 +15,6 @@ class User {
     this.is_admin = isAdmin;
   }
 
-  // get _id(){
-  //   return this.id;
-  // }
-
-  // set _id(value){
-  //   this.id = value;
-  // }
-
-  // get _first_name() {
-  //   return this.first_name;
-  // }
-
-  // set _first_name(value) {
-  //   this.first_name = value;
-  // }
-
-  // get _last_name() {
-  //   return this.last_name;
-  // }
-
-  // set _last_name(value) {
-  //   this.last_name = value;
-  // }
-
-  // get _password() {
-  //   return this.password;
-  // }
-
-  // set _password(value) {
-  //   this.password = this.encrypt(value);
-  // }
-
-  // get _email() {
-  //   return this.email;
-  // }
-
-  // set _email(value) {
-  //   this.email = value;
-  // }
-
-  // get _address() {
-  //   return this.address;
-  // }
-
-  // set _address(value) {
-  //   this.address = value;
-  // }
-
   encrypt(value) {
     const hash = bcrypt.hashSync(value, 10);
     return hash;
