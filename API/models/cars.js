@@ -15,27 +15,27 @@ class Car {
     this.created_on = new Date();
   }
 
-  static saveCar(car) {
-    carData.push(car);
+  // static saveCar(car) {
+  //   carData.push(car);
 
-    // Return last saved Record
-    return carData[carData.length - 1];
-  }
+  //   // Return last saved Record
+  //   return carData[carData.length - 1];
+  // }
 
-  static getCars() {
-    return carData;
-  }
+  // static getCars() {
+  //   return carData;
+  // }
 
-  static getCarByUser(user_id) {
-    const cars = [];
+  // static getCarByUser(user_id) {
+  //   const cars = [];
 
-    for (let i = 0; i < carData.length; i++) {
-      if (carData[i].owner === user_id) {
-        cars.push(carData[i]);
-      }
-    }
-    return cars;
-  }
+  //   for (let i = 0; i < carData.length; i++) {
+  //     if (carData[i].owner === user_id) {
+  //       cars.push(carData[i]);
+  //     }
+  //   }
+  //   return cars;
+  // }
 
   generateId() {
     return uuid.v1();
