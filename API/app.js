@@ -6,6 +6,7 @@ const app = express();
 const User = require('./models/users');
 
 const userRouter = require('./routers/users');
+const carRouter = require('./routers/cars');
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +21,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 
 app.use('/auth', userRouter);
+app.use('/car', carRouter);
 
 module.exports = app;
 
