@@ -10,12 +10,22 @@ exports.saveCar = (req, res, next) => {
     req.body.body_type,
   );
 
-  // const car = Car.saveCar(newCar);
+  const car = Car.saveCar(newCar);
 
-  // const data = {
-  //     status: 201,
-  //     data: car,
-  //   };
+  const data = {
+    status: 201,
+    data: car,
+  };
 
-  // res.status(201).json(data);
+  res.status(201).json(data);
+};
+
+exports.getCars = (req, res, next) => {
+  const cars = Car.getCars();
+
+  const data = {
+    status: 200,
+    data: cars,
+  };
+  res.status(200).json(data);
 };

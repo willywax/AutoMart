@@ -15,16 +15,16 @@ class Car {
     this.created_on = new Date();
   }
 
-  // static saveCar(car) {
-  //   carData.push(car);
+  static saveCar(car) {
+    carData.push(car);
 
-  //   // Return last saved Record
-  //   return carData[carData.length - 1];
-  // }
+    // Return last saved Record
+    return carData[carData.length - 1];
+  }
 
-  // static getCars() {
-  //   return carData;
-  // }
+  static getCars() {
+    return carData;
+  }
 
   // static getCarByUser(user_id) {
   //   const cars = [];

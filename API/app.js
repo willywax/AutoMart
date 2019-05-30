@@ -20,8 +20,8 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
-app.use('/auth', userRouter);
-app.use('/car', carRouter);
+app.use('/api/v1/auth', userRouter);
+app.use('/api/v1/car', carRouter);
 
 module.exports = app;
 
