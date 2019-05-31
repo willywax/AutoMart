@@ -29,3 +29,70 @@ exports.getCars = (req, res, next) => {
   };
   res.status(200).json(data);
 };
+
+exports.getCar = (req, res, next) => {
+  const car = Car.findOne(req.params.id);
+
+  const data = {
+    status: 200,
+    data: car,
+  };
+  res.status(200).json(data);
+};
+
+exports.searchCar = (req, res, next) => {
+  const { params } = req;
+
+  res.status(200).json(params);
+};
+exports.updatePrice = (req, res, next) => {
+  const car = Car.findOne(req.params.id);
+
+  if (car !== null) {
+    car.price = req.body.price;
+    const result = Car.updateOne(car);
+
+    const data = {
+      status: 200,
+      data: result,
+    };
+
+    res.status(200).json(data);
+  } else {
+    res.status(404).json('Error Occured');
+  }
+};
+
+exports.updateStatus = (req, res, next) => {
+  const car = Car.findOne(req.params.id);
+
+  if (car !== null) {
+    car.status = req.body.status;
+    const result = Car.updateOne(car);
+
+    const data = {
+      status: 200,
+      data: result,
+    };
+
+    res.status(200).json(data);
+  } else {
+    res.status(404).json('Error Occured');
+  }
+};
+
+exports.deleteCar = (req, res, next) => {
+  const car = Car.findOne(req.params.id);
+
+  if (car !== null) {
+    const result = Car.deleteOne(car);
+
+    const data = {
+      status: 200,
+      data: result,
+    };
+
+    res.status(200).json(data);
+  }
+  res.status(404).json('Failed');
+};

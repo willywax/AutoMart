@@ -7,6 +7,9 @@ const User = require('./models/users');
 
 const userRouter = require('./routers/users');
 const carRouter = require('./routers/cars');
+const orderRouter = require('./routers/orders');
+
+const data = require('./models/testData');
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,18 +23,10 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
+data.populateData();
+
 app.use('/api/v1/auth', userRouter);
 app.use('/api/v1/car', carRouter);
+app.use('/api/v1/order', orderRouter);
 
 module.exports = app;
-
-// const person = new User(
-//     'William',
-//     'William',
-//     '123123',
-//     'w@stations.com',
-//     '144 Peter Road',
-//     false,
-//   );
-
-// console.log(person.id);

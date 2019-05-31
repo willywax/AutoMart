@@ -3,11 +3,11 @@ const uuid = require('uuid');
 const carData = [];
 
 class Car {
-  constructor(owner, state, status, price, manufacturer, model, body_type) {
+  constructor(owner, state, price, manufacturer, model, body_type) {
     this.id = this.generateId();
     this.owner = owner;
     this.state = state;
-    this.status = status;
+    this.status = 'available';
     this.price = price;
     this.manufacturer = manufacturer;
     this.model = model;
@@ -26,16 +26,41 @@ class Car {
     return carData;
   }
 
-  // static getCarByUser(user_id) {
-  //   const cars = [];
+  static findOne(car) {
+    let result = null;
+    for (let i = 0; i < carData.length; i++) {
+      if (carData[i].id === car) {
+        result = carData[i];
+        break;
+      }
+    }
+    return result;
+  }
 
-  //   for (let i = 0; i < carData.length; i++) {
-  //     if (carData[i].owner === user_id) {
-  //       cars.push(carData[i]);
-  //     }
-  //   }
-  //   return cars;
-  // }
+  static updateOne(car) {
+    let result = null;
+    for (let i = 0; i < carData.length; i++) {
+      if (carData[i].id === car.id) {
+        carData[i] = car;
+        result = carData[i];
+        break;
+      }
+    }
+    return result;
+  }
+
+  static deleteOne(car) {
+    let result = null;
+    for (let i = 0; i < carData.length; i++) {
+      if (carData[i].id === car.id) {
+        carData.splice(i, 1);
+        // carData[i] = car;
+        result = car;
+        break;
+      }
+    }
+    return result;
+  }
 
   generateId() {
     return uuid.v1();
