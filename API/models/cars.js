@@ -49,6 +49,46 @@ class Car {
     return result;
   }
 
+  static searchCar(queries) {
+    const keys = Object.keys(queries);
+    const cars = [];
+    for (let i = 0; i < carData.length; i++) {
+      let found = false;
+      for (const key of keys) {
+        if (key === 'min_price' || key === 'max_price') {
+          if (key === 'min_price') {
+            if (carData[i].price >= queries.min_price) {
+              found = true;
+            } else {
+              found = false;
+              break;
+            }
+          }
+          if (key === 'max_price') {
+            if (carData[i].price <= queries.max_price) {
+              found = true;
+            } else {
+              found = false;
+              break;
+            }
+          }
+        } else if (carData[i][key] === queries[key]) {
+          found = true;
+        } else {
+          found = false;
+          break;
+        }
+      }
+      if (found) {
+        cars.push(carData[i]);
+      }
+    }
+
+    return cars;
+  }
+
+  static validateKeys(keys) {}
+
   static deleteOne(car) {
     let result = null;
     for (let i = 0; i < carData.length; i++) {
