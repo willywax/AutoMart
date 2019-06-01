@@ -21,12 +21,19 @@ exports.saveCar = (req, res, next) => {
 };
 
 exports.getCars = (req, res, next) => {
-  const cars = Car.getCars();
+  let cars = Car.getCars();
+  const queries = req.query;
 
   const data = {
     status: 200,
     data: cars,
   };
+
+  if (Object.keys(queries).length) {
+    cars = Car.searchCar(queries);
+    data.data = cars;
+    res.status(200).json(data);
+  }
   res.status(200).json(data);
 };
 
@@ -43,7 +50,7 @@ exports.getCar = (req, res, next) => {
 exports.searchCar = (req, res, next) => {
   const { params } = req;
 
-  res.status(200).json(params);
+  res.status(200).json(req.query);
 };
 exports.updatePrice = (req, res, next) => {
   const car = Car.findOne(req.params.id);
