@@ -47,11 +47,6 @@ exports.getCar = (req, res, next) => {
   res.status(200).json(data);
 };
 
-exports.searchCar = (req, res, next) => {
-  const { params } = req;
-
-  res.status(200).json(req.query);
-};
 exports.updatePrice = (req, res, next) => {
   const car = Car.findOne(req.params.id);
 
