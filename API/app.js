@@ -8,6 +8,7 @@ const User = require('./models/users');
 const userRouter = require('./routers/users');
 const carRouter = require('./routers/cars');
 const orderRouter = require('./routers/orders');
+const flagRouter = require('./routers/flags');
 
 const data = require('./models/testData');
 
@@ -21,6 +22,8 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static(`${__dirname}/UI`));
+
 app.use(bodyParser.json());
 
 data.populateData();
@@ -28,5 +31,6 @@ data.populateData();
 app.use('/api/v1/auth', userRouter);
 app.use('/api/v1/car', carRouter);
 app.use('/api/v1/order', orderRouter);
+app.use('/api/v1/flag', flagRouter);
 
 module.exports = app;
