@@ -9,6 +9,9 @@ const { expect } = chai;
 const url = 'http://localhost:3000';
 const requester = chai.request.agent(url);
 
+const index = require('../index');
+const app = require('../app');
+
 const User = require('../models/users');
 // const userController = require('../controllers/users');
 
@@ -88,24 +91,24 @@ describe('Model Tests', () => {
     });
   });
 
-  // describe('User Controller', () => {
-  //   const person = {
-  //     "firstName":"William",
-  //     "lastName": "Max",
-  //     "password":"123123",
-  //     "email": "w@station.com",
-  //     "address" : "144 Peter Road",
-  //     "isAdmin" : false
-  //   }
+  describe('User Controller', () => {
+    const person = {
+      firstName: 'William',
+      lastName: 'Max',
+      password: '123123',
+      email: 'w@station.com',
+      address: '144 Peter Road',
+      isAdmin: false,
+    };
 
-  //   it('Verifies Users is registed successfully', (done) => {
-  //     requester
-  //       .post('/auth/signup')
-  //       .send(person)
-  //       .end((err, res) => {
-  //         expect(res).to.have.status(201);
-  //         done();
-  //       });
-  //   });
-  // });
+    it('Verifies Users is registed successfully', (done) => {
+      requester
+        .post('/auth/signup')
+        .send(person)
+        .end((err, res) => {
+          expect(res).to.have.status(201);
+          done();
+        });
+    });
+  });
 });

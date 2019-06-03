@@ -34,7 +34,7 @@ class User {
   static logInUser(authenticatingUser) {
     const user = this.findUser(authenticatingUser);
 
-    let response = {
+    const response = {
       authenticated: false,
       data: null,
     };
@@ -42,16 +42,12 @@ class User {
       const result = this.decrypt(user.password, authenticatingUser.password);
 
       if (result) {
-        response = {
-          authenticated: true,
-          data: user,
-        };
+        response.authenticated = true;
+        response.data = user;
       }
     } else {
-      response = {
-        authenticated: false,
-        data: 'Incorect Username or Password',
-      };
+      response.authenticated = false;
+      response.data = 'Incorrect Username or Password';
     }
     return response;
   }
@@ -68,7 +64,6 @@ class User {
   }
 
   static findUser(user) {
-    const found = false;
     for (let i = 0; i < userData.length; i++) {
       if (userData[i].email === user.email) {
         return userData[i];
