@@ -273,8 +273,6 @@ nav a:hover{
     margin: 0;
     padding: 0;
     text-align: center;
-  
-   
 }
 
 #nav-content ul li {
@@ -352,7 +350,6 @@ nav a:hover{
         top: 0;
         right: 0;
         
-
     }
 
     #nav-content ul {
@@ -362,7 +359,7 @@ nav a:hover{
     #nav-content ul li {
         display: inline-block;
         border-bottom: none;
-        border-right: 1px solid rgb(243,74,11);
+        border-right: 2px solid rgb(243,74,11);
     }
 
     #nav-content ul li:first-child{
@@ -377,17 +374,50 @@ nav a:hover{
         font-weight: bold;
     }
 
-
-
-
-
-    .filter-data {
-        display: inherit;
-        width: 90%;
-    }
+  
     .card {
         width: 320px;
     }
+
+    /*** Filters **/
+   #filters {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-content {
+    background: white;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    left: 10px;
+    box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
+    
+}
+    select {
+        width: 31%;
+        border: none;
+        height: 40px;
+        padding: 12px;
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+        font-size: 14px;
+        text-align: center;
+        float: left;
+        margin: 5px;
+    }
+
+    #dropdown-content button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
 }
 
 /*** Ipad ***/
