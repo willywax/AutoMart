@@ -20,91 +20,71 @@
                 <a href="./index.html">
                     <img src="./images/back.png" alt="Logo">
                 </a>
-               
+
             </div>
         </header>
         <main class="main">
-            <form>
-                <div class="main-cards">
-                    <div class="cards">
-                        <h2>Details</h2>
-                        <div class="form-label">
-                            <label>Make</label>
-                            <label>Model</label>
+            <div class="main-cards">
+                <div class="cards">
+                    <div class="section-header">
+                        <h3>Details</h3>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="make" placeholder="Make">
+                        <input type="text" name="model" placeholder="Model">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="year" placeholder="Year">
+                        <input type="text" name="mileage" placeholder="Mileage (Kms)">
+                    </div>
+                    <div class="form-label">
+                        <label>Condition</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <label for="radio1">New</label>
+                            <input id="radio1" name="condition" type="radio" />
                         </div>
-                        <div class="form-group">
-                            <input type="text" name="" placeholder="Make">
-                            <input type="text" name="" placeholder="Model">
-                        </div>
-                        <div class="form-label">
-                            <label>Year</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="field3" class="field-long" />
-                        </div>
-                        <div class="form-label">
-                            <label>Mileage</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="field3" class="field-long" />
-                        </div>
-                        <div class="form-label">
-                            <label>Condition</label>
-                        </div>
-                        <div class="form-group">
-                            <div class="radio-group">
-                                <label for="radio1">New</label>
-                                <input id="radio1" name="condition" type="radio" />
-                            </div>
-                            <div class="radio-group">
-                                <label for="radio2">Used</label>
-                                <input id="radio2" name="condition" type="radio" />
-
-                            </div>
-                        </div>
-                        <div class="form-label">
-                            <label>Transmission</label>
-                        </div>
-                        <div class="form-group">
-                            <div class="radio-group">
-                                <label for="radio3">Manual</label>
-                                <input id="radio3" name="transmission" type="radio" />
-                            </div>
-                            <div class="radio-group">
-                                <label for="radio4">Automatic</label>
-                                <input id="radio4" name="transmission" type="radio" />
-
-                            </div>
-                        </div>
-                        <div class="form-label">
-                            <label>Description <span class="required">*</span></label>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
-                        </div>
-                        <div class="form-label">
-                            <label>Price</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="" placeholder="Price">
+                        <div class="radio-group">
+                            <label for="radio2">Used</label>
+                            <input id="radio2" name="condition" type="radio" />
                         </div>
                     </div>
-
-                    <div class="cards">
-                        <h2>Upload Photos</h2>
-                        <div id="preview">
-                            <div class="upload-btn-wrapper">
-                                <button class="btn">Upload a file</button>
-                                <input id="browse" type="file" onchange="previewFiles()" multiple>
-                            </div>
+                    <div class="form-label">
+                        <label>Transmission</label>
+                    </div>
+                    <div class="form-group">
+                        <div class="radio-group">
+                            <label for="radio3">Manual</label>
+                            <input id="radio3" name="transmission" type="radio" />
                         </div>
-                        <input type="submit" name="" id="logInBtn" value="POST AD">
+                        <div class="radio-group">
+                            <label for="radio4">Auto</label>
+                            <input id="radio4" name="transmission" type="radio" />
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="field5" id="field5" class="field-long field-textarea" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="" placeholder="Price">
                     </div>
                 </div>
 
-                <hr>
-             
-            </form>
+                <div class="cards">
+                    <div class="section-header">
+                        <h3>Photos</h3>
+                    </div>
+                    <div id="preview">
+                        <div class="upload-btn-wrapper">
+                            <button class="btn">Upload a photo</button>
+                            <input id="browse" type="file" onchange="previewFiles()" multiple>
+                        </div>
+                    </div>
+                    <input type="submit" name="" id="logInBtn" value="POST AD">
+                </div>
+            </div>
         </main>
     </div>
 
@@ -121,7 +101,7 @@
                 if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
                     var reader = new FileReader();
 
-                    reader.addEventListener("load", function () {
+                    reader.addEventListener("load", function() {
                         var image = new Image();
 
                         var img = new Image();
@@ -149,8 +129,8 @@
 
     <script>
         const condition_radio = document.querySelector('radio-group');
-        
-        condition_radio.addEventListener('click',function(){
+
+        condition_radio.addEventListener('click', function() {
             condition_radio.classList
         })
     </script>

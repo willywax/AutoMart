@@ -23,7 +23,7 @@ body {
 }
 
 .radio-group:hover {
-    background-color: #47cba1;
+    background-color: rgb(243,74,11);
 }
 
 .radio-group label {
@@ -45,11 +45,11 @@ input[type=text]{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-.field-textarea,
+.field-textarea:focus,
  input[type="text"]:focus,
  input[type="number"]:focus
 {
-    border: 2px solid #47cba1;
+    border: 2px solid rgb(243,74,11);
 }
 
 .field-textarea{
