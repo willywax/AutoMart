@@ -12,7 +12,7 @@ body {
     background: #fff;
     width: 400px;
     min-height: 200px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     padding: 40px;
     box-sizing: border-box;
@@ -20,25 +20,24 @@ body {
 
 .user {
     margin: 0 auto;
-    display: block;
-    margin-bottom: 30px;
+    display: block
 }
-h3{
+
+h3 {
     margin: 0;
     padding: 0 0 20px;
     color: #232323;
     text-align: center;
 }
 
-.loginBox input{
+.loginBox input {
     width: 100%;
     margin-bottom: 20px;
 }
 
 .loginBox input[type="email"],
 .loginBox input[type="password"],
-.loginBox input[type="text"]
-{
+.loginBox input[type="text"] {
     border: none;
     border-bottom: 1px solid #262626;
     height: 40px;
@@ -52,37 +51,40 @@ h3{
 
 .loginBox input[type="email"]:focus,
 .loginBox input[type="password"]:focus,
-.loginBox input[type="text"]:focus
-{
-    border-bottom: 2px solid rgb(243,74,11);
+.loginBox input[type="text"]:focus {
+    border-bottom: 2px solid rgb(243, 74, 11);
 }
 
-#logInBtn
-{
+#logInBtn {
     border: none;
     outline: none;
     height: 40px;
     font-size: 16px;
     border-radius: 20px;
     cursor: pointer;
-    background: rgb(243,74,11);
+    background: rgb(243, 74, 11);
     width: 100%;
+    font-weight: bold;
+    color: white;
 }
 
-.loginBox a 
-{
+.loginBox a {
     color: #262626;
     font-size: 14px;
-    color: rgb(243,74,11);
+    color: rgb(243, 74, 11);
     text-decoration: none;
     text-align: center;
 }
 
 ul {
     margin-top: 20px;
-
 }
 
 ul li {
     padding: 10px;
+}
+
+.loginBox img {
+    height: 250px;
+    width: 300px;
 }
