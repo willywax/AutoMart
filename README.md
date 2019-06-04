@@ -1,2 +1,2 @@
 # AutoMart
-Site Available on  https://willywax.github.io/AutoMart/API/UI/index.html
+Site Available on  https://willywax.github.io/AutoMart/UI/index.html
