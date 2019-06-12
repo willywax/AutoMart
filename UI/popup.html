@@ -6,46 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pop Up</title>
-    <style>
-        .modal {
-            display: none;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
-            position: fixed;
-            z-index: 1;
-            padding-top: 70px;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            overflow: auto;
-
-        }
-
-        .modal-content {
-            background: #fefefe;
-            width: 80%;
-            margin: auto;
-            border: 1px solid black;
-        }
-
-        .close {
-            float: right;
-            font-weight: bold;
-            font-size: 38px;
-            color: #aaa;
-        }
-
-        .close:hover,
-        .close:focus {
-            cursor: pointer;
-            text-decoration: none;
-            color: #000;
-        }
-    </style>
 
     <link href="./styles/popup.css" type="text/css" rel="stylesheet">
-  
+
     <link href="./styles/gallery.css" type="text/css" rel="stylesheet">
 </head>
 
@@ -53,10 +16,12 @@
     <h2>Open Modal</h2>
 
     <button id="modal-btn">Click Modal</button>
-
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <div class="modal-header">
+                <span class="modal-title">Car Preview</span>
+                <span class="close">&times;</span>
+            </div>
             <div class="main-cards">
                 <section>
                     <div class="image-container">
@@ -94,52 +59,52 @@
                 <section>
                     <div class="section-header">
                         <h3>Details</h3>
+                        <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p> 
                     </div>
                     <div class="details">
                         <div class="data-forms">
-                            <label>Make</label>
-                            <span>Toyota</span>
+                            <label>Make:</label>
+                            <span class="text">BMW</span>
                         </div>
                         <div class="data-forms">
-                            <label>Model</label>
-                            <span>Crown</span>
+                            <label>Model:</label>
+                            <span class="text">X6</span>
                         </div>
                         <div class="data-forms">
                             <label>Year</label>
-                            <span>2012</span>
+                            <span class="text">2012</span>
                         </div>
                         <div class="data-forms">
                             <label>Mileage</label>
-                            <span>120,000 km</span>
+                            <span class="text">20,000</span>
                         </div>
                         <div class="data-forms">
                             <label>Condition</label>
-                            <span>New</span>
+                            <span class="text">used</span>
                         </div>
                         <div class="data-forms">
                             <label>Transmission</label>
-                            <span>Manual</span>
+                            <span class="text">manual</span>
                         </div>
                         <div class="data-forms">
                             <label>Fuel Type</label>
-                            <span>Diesel</span>
+                            <span class="text">Toyota</span>
                         </div>
                         <div class="data-forms">
                             <label>Location</label>
-                            <span>Mwanza</span>
+                            <span class="text">gasoline</span>
                         </div>
-
-                        <h3>Description</h3>
-                        <p>Best Car For the Price</p>
                     </div>
                 </section>
                 <section>
-                    <div class="data-forms">
+                    <!-- <div class="data-forms"> -->
                         <span id="price">TZS 15,000,000</span>
-                    </div>
-                    <div class="data-forms">
-                        <input type="submit" class="success" name="" id="buyBtn" value="BUY">
-                        <input type="submit" class="danger" name="" id="reportBtn" value="FLAG">
+                    <!-- </div> -->
+                    <div class="form-buttons">
+                        <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
+                        <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
                     </div>
                 </section>
             </div>
@@ -151,13 +116,13 @@
         var modalBtn = document.getElementById('modal-btn');
         var closeBtn = document.getElementsByClassName('close')[0];
 
-        modalBtn.onclick = function () {
-            modal.style.display = "block";
-        }
+        // modalBtn.onclick = function () {
+        //     modal.style.display = "block";
+        // }
 
-        closeBtn.onclick = function () {
-            modal.style.display = "none";
-        }
+        // closeBtn.onclick = function () {
+        //     modal.style.display = "none";
+        // }
 
     </script>
 </body>
