@@ -1,7 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Lato|Merriweather:700|PT+Sans&display=swap');
-
-
 .main {
     grid-area: main;
     overflow-y: auto;
@@ -27,15 +24,12 @@
 }
 
 
-
-
 /*** Header *****/
 
 
-
-
 /***** Main Content ********/
-.main-header{
+
+.main-header {
     display: flex;
     justify-content: space-around;
     margin: 20px;
@@ -45,7 +39,7 @@
     height: 100px;
 }
 
-.data-forms{
+.data-forms {
     display: inline-block;
     width: 100%;
     margin-top: 15px;
@@ -75,50 +69,65 @@ section:nth-child(2) {
     background: white;
 }
 
-.section-header{
-    padding:0 5px 0 0;
+.section-header {
+    padding: 0 5px 0 0;
     width: 100%;
-    color: rgb(243,74,11);
+    color: rgb(243, 74, 11);
 }
-
 
 #price {
     font-size: 15px;
     font-weight: bold;
     text-align: center;
     padding: 5px;
-    background: rgb(243,74,11);
+    background: rgb(243, 74, 11);
     color: white;
 }
 
-
-
-  /* .btn {
-    border: none;
-    outline: none;
-    height: 40px;
+.btn {
     width: 120px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-weight: bold;
+    height: 45px;
     color: white;
-  } */
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    outline: none;
+    border: double;
+}
 
-  .danger {
-      background-color: rgb(3, 187, 3);
-  }
+.cancel {
+    color: black;
+}
 
-  .danger:hover {
-      background-color: green;
-  }
+.btn-small {
+    font-size: 10px;
+    width: 90px;
+    height: 30px;
+}
 
-  .cancel:hover {
+.danger {
+    background-color: rgb(3, 187, 3);
+}
+
+.danger:hover {
+    background-color: green;
+}
+
+.cancel:hover {
     background-color: orange;
-  }
+}
+
+.order {
+    background: rgb(243, 74, 11);
+    color: white;
+    cursor: pointer;
+}
 
 
 /*** Modal PopUp ***/
+
 .modal {
     display: none;
     background-color: rgb(0, 0, 0);
@@ -131,12 +140,12 @@ section:nth-child(2) {
     height: 100%;
     width: 100%;
     overflow: auto;
-    font-family: 'Lato','sans-serif';
+    font-family: 'Lato', 'sans-serif';
     text-align: left;
-
 }
+
 .modal-header {
-    background: rgb(243,74,11);
+    background: rgb(243, 74, 11);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -159,6 +168,7 @@ section:nth-child(2) {
     font-size: 20px;
     font-weight: bold;
 }
+
 .close {
     font-weight: bold;
     font-size: 24px;
@@ -180,26 +190,25 @@ section:nth-child(2) {
 
 
 /****** Gallery ********/
-#expandedImg{
+
+#expandedImg {
     width: 100%;
     margin: 0 auto;
-    max-height: 300px;
+    max-height: 260px;
 }
 
 
 /**** Reponsive on 750px width breakpoint **/
-@media only screen and (min-width:46.875em){
+
+@media only screen and (min-width:46.875em) {
     .details {
         column-count: 2;
     }
-
-    .details .data-forms{
+    .details .data-forms {
         display: inline-block;
         width: 100%;
         padding: 0 5px 0 5px;
-       
     }
-
     .data-forms label {
         color: rgb(91, 91, 91);
         margin-right: 2px;
@@ -209,84 +218,64 @@ section:nth-child(2) {
         width: 100%;
         margin: 0 auto;
     }
-    
-    .data-forms{
+    .data-forms {
         display: inline-block;
         width: 100%;
         margin-top: 10px;
         display: flex;
         justify-content: flex-start;
     }
-
-    input[type=submit]{
+    input[type=submit] {
         margin-right: 10px;
-      }
-
-      #price {
+    }
+    #price {
         text-align: left;
     }
-
-    #expandedImg{
+    #expandedImg {
         width: 100%;
         margin: 0 auto;
     }
-
     /* section:nth-child(2){
         -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
         -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.35);
 
     } */
-
     .text {
         color: rgb(88, 88, 88);
         font-size: 1em;
     }
-
-    
 }
 
-@media only screen and (min-width: 65.625em){
-    .main-cards{
+@media only screen and (min-width: 65.625em) {
+    .main-cards {
         column-count: 2;
         -webkit-column-break-inside: avoid;
     }
-
     .details {
         column-count: 2;
-        padding:0 0 0 5px;
+        padding: 0 0 0 5px;
     }
-
-    .details .data-forms{
+    .details .data-forms {
         display: inline-block;
         width: 100%;
     }
-
     .data-forms label {
         color: rgb(91, 91, 91);
         margin-right: 10px;
     }
-
     section {
         -webkit-column-break-inside: avoid;
         margin-bottom: 10px;
     }
-    
-   
-    .data-forms{
+    .data-forms {
         display: inline-block;
         width: 100%;
-         
     }
-
-    input[type=submit]{
+    input[type=submit] {
         margin-right: 10px;
-      }
-
-      #price {
-        text-align: left;
-       
     }
-    
+    #price {
+        text-align: left;
+    }
 }
-

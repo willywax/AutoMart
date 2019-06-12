@@ -117,26 +117,6 @@ header img {
     background: rgb(243,74,11);
 }
 
-.btn {
-    width: 120px;
-    height: 40px;
-    color: white;
-    font-weight: bold;
-    font-size: 13px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-.cancel {
-    color: black;
-}
-
-.btn-small{
-    font-size: 10px;
-    width: 90px;
-    height: 30px;
-    
-}
 
 .flex-row{
     display: flex;

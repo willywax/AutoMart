@@ -95,7 +95,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -114,7 +114,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -152,7 +152,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -171,7 +171,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -190,7 +190,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
             </div>
@@ -226,6 +226,9 @@
                         <section>
                             <div class="section-header">
                                 <h3>Details</h3>
+                                <div class="data-forms">
+                                        <span id="price">TZS 15,000,000</span>
+                                    </div>
                                 <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                     industry.
                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -266,11 +269,6 @@
                                 </div>
                             </div>
                         </section>
-                        <section>
-                            <div class="data-forms">
-                                <span id="price">TZS 15,000,000</span>
-                            </div>
-                        </section>
                         <div class="form-buttons">
                             <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
                             <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
@@ -288,6 +286,8 @@
 
 <script>
     var previewModal = document.getElementById('previewModal');
+
+    var orderModal = document.getElementById('orderModal');
     
     var previewBtn = document.getElementById('previewBtn');
     var cancelBtn = document.getElementById('cancelBtn');
@@ -296,6 +296,10 @@
     previewBtn.addEventListener('click', function () {
         previewModal.style.display = "block";
     });
+
+    function openPreview(){ 
+        previewModal.style.display = 'block';
+    }
 
     
     var closeBtn = document.getElementsByClassName('close')[0];
