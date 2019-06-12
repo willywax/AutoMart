@@ -1,16 +1,15 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background-color: #fff;
-}
-
 .form-group {
     display: block;
 }
 
 .form-label {
     margin-top: 10px;
+}
+
+.label {
+    width: 45%;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 .radio-group {
@@ -45,6 +44,7 @@ input[type=text]{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
+
 .field-textarea:focus,
  input[type="text"]:focus,
  input[type="number"]:focus
@@ -83,15 +83,7 @@ input[type=text]{
     display: inline-block;
   }
   
-  .btn {
-    border: 2px solid gray;
-    color: gray;
-    background-color: white;
-    padding: 8px 20px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
-  }
+
   
   .upload-btn-wrapper input[type=file] {
     font-size: 100px;
