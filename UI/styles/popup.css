@@ -83,10 +83,10 @@ section:nth-child(2) {
 
 
 #price {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     background: rgb(243,74,11);
     color: white;
 }
@@ -148,7 +148,7 @@ section:nth-child(2) {
 
 .modal-content {
     background: #fefefe;
-    width: 80%;
+    width: 70%;
     margin: auto;
     border-radius: 1%;
     overflow: auto;
@@ -175,11 +175,9 @@ section:nth-child(2) {
 .form-buttons {
     display: flex;
     flex-direction: row-reverse;
-    position: absolute;
-    bottom: 5px;
-    right: 3px;
-
+    margin: 15px 25px 0px 0px;
 }
+
 
 /****** Gallery ********/
 #expandedImg{

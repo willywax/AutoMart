@@ -127,6 +127,10 @@ header img {
     cursor: pointer;
 }
 
+.cancel {
+    color: black;
+}
+
 .btn-small{
     font-size: 10px;
     width: 90px;

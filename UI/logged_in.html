@@ -99,7 +99,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="btn theme-color-btn" id="previewBtn">PREVIEW</button>
+                        <button class="btn theme-color-btn" id="" onclick="openPreview('preview')">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -118,7 +118,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="previewBtn" onclick="openPreview('preview')">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -137,7 +137,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview('preview')">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -156,7 +156,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn" >PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview('preview')" >PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -175,7 +175,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview('preview')">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -194,7 +194,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview('preview')">PREVIEW</button>
                     </div>
                 </div>
             </div>
@@ -230,6 +230,9 @@
                         <section>
                             <div class="section-header">
                                 <h3>Details</h3>
+                                <div class="data-forms">
+                                    <span id="price">TZS 15,000,000</span>
+                                </div>
                                 <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                     industry.
                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
@@ -270,13 +273,8 @@
                                 </div>
                             </div>
                         </section>
-                        <section>
-                            <div class="data-forms">
-                                <span id="price">TZS 15,000,000</span>
-                            </div>
-                        </section>
                         <div class="form-buttons">
-                            <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
+                            <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
                             <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
                             <input type="submit" class="btn order" name="" id="orderBtn" value="ORDER">
                         </div>
@@ -316,7 +314,6 @@
                                     <div class="section-header">
                                         <h3>Order Summary</h3>
                                     </div>
-                                    <!-- <div class="details"> -->
                                         <div class="form-label">
                                             <label class="label">Order Date</label>
                                             <label class="label">Order status</label>
@@ -341,10 +338,9 @@
                                             <input type="text" name="car_price" placeholder="Car Price" value="15,000,000" disabled>
                                             <input type="text" name="amount" placeholder="Amount to Bid">
                                         </div>
-                                    <!-- </div> -->
                                 </section>
                                 <div class="form-buttons">
-                                    <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
+                                    <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
                                     <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
                                     <input type="submit" class="btn order" name="" id="submitOrderBtn" value="ORDER">
                                 </div>
@@ -352,7 +348,6 @@
                     </div>
             </div>
         </main>
-        <!-- <footer class="footer"></footer> -->
     </div>
     <script src="./js/dropdown.js"></script>
    
