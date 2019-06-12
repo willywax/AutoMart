@@ -8,45 +8,9 @@
     <link rel="stylesheet" href="./styles/landing.css" type="text/css">
     <link href="./styles/popup.css" type="text/css" rel="stylesheet">
     <link href="./styles/gallery.css" type="text/css" rel="stylesheet">
-    <title>Index</title>
 
-    <style>
-            .modal {
-                display: none;
-                background-color: rgb(0, 0, 0);
-                background-color: rgba(0, 0, 0, 0.4);
-                position: fixed;
-                z-index: 1;
-                padding-top: 70px;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                overflow: auto;
     
-            }
-    
-            .modal-content {
-                background: #fefefe;
-                width: 80%;
-                margin: auto;
-                border: 1px solid black;
-            }
-    
-            .close {
-                float: right;
-                font-weight: bold;
-                font-size: 38px;
-                color: #aaa;
-            }
-    
-            .close:hover,
-            .close:focus {
-                cursor: pointer;
-                text-decoration: none;
-                color: #000;
-            }
-        </style>
+    <title>Index</title>
 </head>
 
 <body>
@@ -79,7 +43,7 @@
         </header>
         <main class="main flex-column">
             <div id="filters">
-                <button onclick="myFunction()" class="dropdown">
+                <button id="filterBtn" class="dropdown">
                     Filters <span><img src="./images/down.svg" alt=""></span>
                 </button>
                 <div id="dropdown-content" class="hide">
@@ -136,14 +100,11 @@
                     </div>
                     <div class="card-button flex-row">
                         <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
-                        <!-- <a href="./view_car.html">
-                            <button class="theme-color-btn btn">PREVIEW</button>
-                        </a> -->
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="./images/dodge.jpg">
+                        <img src="./images/car2.jpeg">
                     </div>
                     <div class="card-label flex-row">
                         <h3>BMW 3SERIES V8</h3>
@@ -157,10 +118,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <a href="./view_car.html">
-                            <button class="theme-color-btn btn">PREVIEW</button>
-                        </a>
-
+                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -179,9 +137,45 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <a href="./view_car.html">
-                            <button class="theme-color-btn btn">PREVIEW</button>
-                        </a>
+                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./images/camaro.jpg">
+                    </div>
+                    <div class="card-label flex-row">
+                        <h3>BMW 3SERIES V8</h3>
+                        <span class="price theme-color">$4,400</span>
+                    </div>
+                    <div class="card-description">
+                        <hr>
+                        <p>
+                            Next level Pinterest farm-to-table selvage gentrify street art raw denim Helvetica street
+                            art pork belly.
+                        </p>
+                    </div>
+                    <div class="card-button flex-row">
+                        <button class="theme-color-btn btn" id="previewBtn" >PREVIEW</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./images/car2.jpeg">
+                    </div>
+                    <div class="card-label flex-row">
+                        <h3>BMW 3SERIES V8</h3>
+                        <span class="price theme-color">$4,400</span>
+                    </div>
+                    <div class="card-description">
+                        <hr>
+                        <p>
+                            Next level Pinterest farm-to-table selvage gentrify street art raw denim Helvetica street
+                            art pork belly.
+                        </p>
+                    </div>
+                    <div class="card-button flex-row">
+                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -200,150 +194,103 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <a href="./view_car.html">
-                            <button class="theme-color-btn btn">PREVIEW</button>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
-                        <img src="./images/car3.jpg">
-                    </div>
-                    <div class="card-label flex-row">
-                        <h3>BMW 3SERIES V8</h3>
-                        <span class="price theme-color">$4,400</span>
-                    </div>
-                    <div class="card-description">
-                        <hr>
-                        <p>
-                            Next level Pinterest farm-to-table selvage gentrify street art raw denim Helvetica street
-                            art pork belly.
-                        </p>
-                    </div>
-                    <div class="card-button flex-row">
-                        <a href="./view_car.html">
-                            <button class="theme-color-btn btn">PREVIEW</button>
-                        </a>
+                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
                     </div>
                 </div>
             </div>
             <div id="previewModal" class="modal">
-                    <div class="modal-content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="modal-title">Car Preview</span>
                         <span class="close">&times;</span>
-                        <div class="main-cards">
-                            <section>
-                                <div class="image-container">
-                                    <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
-                                    <img id="expandedImg" src="./images/camaro.jpg" alt="Cool Car">
-                                    <div id="imageText">
-                                        Cool Cars
-                                    </div>
+                    </div>
+                    <div class="main-cards">
+                        <section>
+                            <div class="image-container">
+                                <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
+                                <img id="expandedImg" src="./images/camaro.jpg" alt="Cool Car">
+                                <div id="imageText">
+                                    Cool Cars
                                 </div>
-                                <div class="row">
-                                    <div class="column">
-                                        <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                        <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                        <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                        <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                        <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                        <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
-                                    </div>
-                                    <div class="column">
-                                        <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
                                 </div>
-            
-                            </section>
-                            <section>
-                                <div class="section-header">
-                                    <h3>Details</h3>
+                                <div class="column">
+                                    <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
                                 </div>
-                                <div class="details">
-                                    <div class="data-forms">
-                                        <label>Make</label>
-                                        <span>Toyota</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Model</label>
-                                        <span>Crown</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Year</label>
-                                        <span>2012</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Mileage</label>
-                                        <span>120,000 km</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Condition</label>
-                                        <span>New</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Transmission</label>
-                                        <span>Manual</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Fuel Type</label>
-                                        <span>Diesel</span>
-                                    </div>
-                                    <div class="data-forms">
-                                        <label>Location</label>
-                                        <span>Mwanza</span>
-                                    </div>
-            
-                                    <h3>Description</h3>
-                                    <p>Best Car For the Price</p>
+                                <div class="column">
+                                    <img src="./images/car3.jpg" alt="Nature" onclick="myFunction(this);">
                                 </div>
-                            </section>
-                            <section>
+
+                            </div>
+
+                        </section>
+                        <section>
+                            <div class="section-header">
+                                <h3>Details</h3>
+                                <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                </p>
+                            </div>
+                            <div class="details">
                                 <div class="data-forms">
-                                    <span id="price">TZS 15,000,000</span>
+                                    <label>Make:</label>
+                                    <span class="text">BMW</span>
                                 </div>
                                 <div class="data-forms">
-                                    <input type="submit" class="success" name="" id="buyBtn" value="BUY">
-                                    <input type="submit" class="danger" name="" id="reportBtn" value="FLAG">
+                                    <label>Model:</label>
+                                    <span class="text">X6</span>
                                 </div>
-                            </section>
+                                <div class="data-forms">
+                                    <label>Year</label>
+                                    <span class="text">2012</span>
+                                </div>
+                                <div class="data-forms">
+                                    <label>Mileage</label>
+                                    <span class="text">20,000</span>
+                                </div>
+                                <div class="data-forms">
+                                    <label>Condition</label>
+                                    <span class="text">used</span>
+                                </div>
+                                <div class="data-forms">
+                                    <label>Transmission</label>
+                                    <span class="text">manual</span>
+                                </div>
+                                <div class="data-forms">
+                                    <label>Fuel Type</label>
+                                    <span class="text">Toyota</span>
+                                </div>
+                                <div class="data-forms">
+                                    <label>Location</label>
+                                    <span class="text">gasoline</span>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="data-forms">
+                                <span id="price">TZS 15,000,000</span>
+                            </div>
+                        </section>
+                        <div class="form-buttons">
+                            <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
+                            <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
                         </div>
                     </div>
                 </div>
+            </div>
         </main>
         <!-- <footer class="footer"></footer> -->
     </div>
     <script src="./js/dropdown.js"></script>
-    <script>
-        var previewModal = document.getElementById('previewModal');
-        var previewBtn = document.getElementById('previewBtn');
+   
 
-        previewBtn.onclick = function () {
-            previewModal.style.display = "block";
-        }
-
-        var closeBtn = document.getElementsByClassName('close')[0];
-
-        closeBtn.onclick = function () {
-            previewModal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == previewModal) {
-                previewModal.style.display = "none";
-            }
-        }
-    </script>
-
-<script src="./js/gallery.js"></script>
+    <script src="./js/gallery.js"></script>
 </body>
+
+<script src="./js/modal.js"></script>
 
 </html>
