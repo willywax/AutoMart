@@ -1,6 +1,7 @@
-
 var filterBtn = document.getElementById('filterBtn');
-filterBtn.onclick = function () {
+//filterBtn.onclick =
+
+function closeFilter() {
     var dropdown = document.getElementById('dropdown-content');
     if (dropdown.classList.contains('show')) {
         dropdown.classList.remove('show');
