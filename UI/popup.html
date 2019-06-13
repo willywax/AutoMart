@@ -18,72 +18,19 @@
 
     <button id="modal-btn">Click Modal</button>
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="modal-title">Order Details</span>
-                <span class="close">&times;</span>
+            <div class="modal-content confirm-content">
+                    <div class="modal-header">
+                        <span class="modal-title">Order Confirmation</span>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="confirm">
+                        <h2>Submit Order </h2>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
+                            <button type="submit" class="btn order" id="" onclick="submitOrder()">CONFIRM</button>
+                        </div>
+                    </div>
             </div>
-            <div class="main-cards">
-                <section>
-                    <div class="image-container">
-                        <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
-                        <img id="expandedImg" src="./images/camaro.jpg" alt="Cool Car">
-                        <div id="imageText">
-                            Cool Cars
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column">
-                            <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
-                        </div>
-                        <div class="column">
-                            <img src="./images/car3.jpg" alt="Nature" onclick="myFunction(this);">
-                        </div>
-
-                    </div>
-
-                </section>
-                <section>
-                    <div class="section-header">
-                        <h3>Order Summary</h3>
-                    </div>
-                    <!-- <div class="details"> -->
-                        <div class="form-label">
-                            <label class="label">Order Date</label>
-                            <label class="label">Order status</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="date" placeholder="Order Date">
-                            <input type="text" name="status" placeholder="Order Status">
-                        </div>
-                        <div class="form-label">
-                            <label class="label">Car Name</label>
-                            <label class="label">Buyer Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="car" placeholder="Car Name" value="BMW X6" disabled>
-                            <input type="text" name="buyer" placeholder="Buyers Name" value="WILLIAM" disabled>
-                        </div>
-                        <div class="form-label">
-                            <label class="label">Car Price</label>
-                            <label class="label">Bid Price</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="car_price" placeholder="Car Price" value="15,000,000" disabled>
-                            <input type="text" name="amount" placeholder="Amount to Bid">
-                        </div>
-                    <!-- </div> -->
-                </section>
-                <div class="form-buttons">
-                    <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
-                    <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
-                    <input type="submit" class="btn order" name="" id="orderBtn" value="ORDER">
-                </div>
-            </div>
-        </div>
     </div>
 
     <script>
