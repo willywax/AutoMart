@@ -3,14 +3,15 @@ var orderModal = document.getElementById('orderModal');
 var flagModal = document.getElementById('flagModal');
 var submitOrderModal = document.getElementById('submitOrderModal');
 var userModal = document.getElementById('userModal');
-var deleteCarModal = document.getElementById('deleteCarModal')
-
+var deleteCarModal = document.getElementById('deleteCarModal');
+var postCarModal = document.getElementById('postModal');
+var submitPostModal = document.getElementById('submitPostModal');
 
 var previewBtn = document.getElementById('previewBtn');
 
 var cancelBtn = document.getElementById('cancelBtn');
 
-//var orderBtn = document.getElementById('orderBtn');
+
 
 var closeBtn = document.getElementsByClassName('close')[0];
 
@@ -18,15 +19,6 @@ closeBtn.onclick = function () {
     previewModal.style.display = "none";
 }
 
-
-
-
-
-//Order MOdal Pop Up
-// orderBtn.addEventListener('click', function () {
-//     previewModal.style.display = "none";
-//     orderModal.style.display = "block";
-// });
 
 // Function to close Modal
 function closeModal(type) {
@@ -44,6 +36,12 @@ function closeModal(type) {
         userModal.style.display = "none";
     else if (type === 'deleteCar')
         deleteCarModal.style.display = "none";
+    else if(type === 'post'){
+        postCarModal.style.display = "none";
+    }
+    else if(type === 'submitPost'){
+        submitPostModal.style.display = "none"
+    }
     else {
         previewModal.style.display = "none";
         orderModal.style.display = "none";
@@ -51,9 +49,9 @@ function closeModal(type) {
         submitOrderModal.style.display = "none";
         userModal.style.display = "none";
         deleteCarModal.style.display = "none";
-
+        postCarModal.style.display = "none";
+        submitPostModal.style.display = "none"
     }
-
 }
 
 //Function to Open ANy Modal
@@ -71,6 +69,10 @@ function openPreview(type) {
         userModal.style.display = "block";
     if (type === 'deleteCar')
         deleteCarModal.style.display = "block";
+    if(type === 'post')
+        postCarModal.style.display = "block";
+    if(type === 'submitPost')
+        submitPostModal.style.display = "block";
 }
 
 //Confrimation Alert

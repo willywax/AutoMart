@@ -350,18 +350,6 @@ nav a:hover{
         border-right: 2px solid rgb(243,74,11);
     }
 
-    #nav-content ul li:first-child{
-        color: white;
-        font-weight: 200;
-        background: rgb(243,74,11);
-        border: none;
-    }
-
-    #nav-content ul li:first-child a{
-        color: white;
-        font-weight: bold;
-    }
-
   
     .card {
         width: 320px;

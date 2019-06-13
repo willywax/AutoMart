@@ -348,7 +348,7 @@ nav a:hover {
         border-bottom: none;
         border-right: 2px solid rgb(243, 74, 11);
     }
-    #nav-content ul li:first-child {
+    /* #nav-content ul li:first-child {
         color: white;
         font-weight: 200;
         background: rgb(243, 74, 11);
@@ -357,7 +357,7 @@ nav a:hover {
     #nav-content ul li:first-child a {
         color: white;
         font-weight: bold;
-    }
+    } */
     .card {
         width: 320px;
     }
