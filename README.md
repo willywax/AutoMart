@@ -31,7 +31,3 @@ accessed using the link  [AutoMart Front End](https://willywax.github.io/AutoMar
 - [x] Admin can delete a posted AD record.
 - [x] Admin can view all posted ads whether sold or unsold.
 
-
-Admin DashBoard on https://willywax.github.io/AutoMart/UI/admin_account.html
-
-User DashBoard on https://willywax.github.io/AutoMart/UI/user_account.htmt
