@@ -298,10 +298,6 @@
     var cancelBtn = document.getElementById('cancelBtn');
 
 
-    // previewBtn.addEventListener('click', function () {
-    //     previewModal.style.display = "block";
-    // });
-
     function openPreview() {
         previewModal.style.display = 'block';
     }
@@ -309,7 +305,7 @@
         previewModal.style.display = 'none';
     }
     function logInPage(value) {
-        alert('You need to be logged In to ' + value);
+        location.href = 'signin.html'
     }
 
     var closeBtn = document.getElementsByClassName('close')[0];
@@ -320,10 +316,7 @@
 
 
     window.onclick = function (event) {
-        //alert(previewModal.style.display);
-        if (previewModal.style.display === 'block') {
-            //previewModal.style.display = "none";
-        }
+    
     }
 
 </script>

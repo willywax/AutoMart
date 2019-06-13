@@ -45,20 +45,22 @@
         </header>
         <main class="main flex-column">
             <div id="content" class="flex-column">
+                <div>
+                    <h4>User Dashboard</h4>
+                </div>
                 <div class="tab">
                     <button class="tablinks active" onclick="openCity(event, 'MyAds')">My Ads</button>
                     <button class="tablinks" onclick="openCity(event, 'Incomming')">Incomming Orders</button>
                     <button class="tablinks" onclick="openCity(event, 'Outgoing')">Outgoing Orders</button>
-                    <button class="tablinks" onclick="openCity(event, 'Profile')">Settings</button>
+                    <button class="tablinks" onclick="openCity(event, 'Profile')">Profile</button>
                 </div>
 
                 <!-- Tab content -->
                 <div id="MyAds" class="tabcontent">
-                    <h3>Cars Ads</h3>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Car Ad Id</th>
+                                <th>Car</th>
                                 <th>Post Date</th>
                                 <th>Owner</th>
                                 <th>Status</th>
@@ -68,65 +70,60 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    <div class="column">
+                                        <img src="./images/dodge.jpg" alt="Nature">
+                                    </div>
                                 </td>
                                 <td>
                                     2018/03/10
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    WILLIAM
                                 </td>
                                 <td>
                                     Available
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('preview')">View / Edit</button>
+                                    <button class="btn order" onclick="openPreview('preview')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    <div class="column">
+                                        <img src="./images/camaro.jpg" alt="Nature">
+                                    </div>
                                 </td>
                                 <td>
                                     2018/03/10
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    WILLIAM
                                 </td>
                                 <td>
                                     Sold
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('preview')">View / Edit</button>
+                                    <button class="btn order" onclick="openPreview('preview')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    <div class="column">
+                                        <img src="./images/car3.jpg" alt="Nature">
+                                    </div>
                                 </td>
+
                                 <td>
                                     2018/04/12
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    WILLIAM
                                 </td>
                                 <td>
                                     Available
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('preview')">View / Edit</button>
+                                    <button class="btn order" onclick="openPreview('preview')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -135,7 +132,6 @@
 
                 <!-- Cars Tab Content -->
                 <div id="Incomming" class="tabcontent">
-                    <h3>Received Orders</h3>
                     <table class="table">
                         <thead>
                             <tr>
@@ -157,15 +153,15 @@
                                     2018/03/10
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    <div class="column">
+                                        <img src="./images/car3.jpg" alt="Nature">
+                                    </div>
                                 </td>
                                 <td>
                                     12,000,000
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('order')">View / Edit</button>
+                                    <button class="btn order" onclick="openPreview('order')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -178,15 +174,15 @@
                                     2018/03/10
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    <div class="column">
+                                        <img src="./images/camaro.jpg" alt="Nature">
+                                    </div>
                                 </td>
                                 <td>
                                     11,000,000
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('order')">View / Edit</button>
+                                    <button class="btn order" onclick="openPreview('order')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -199,15 +195,15 @@
                                     2018/04/12
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
+                                    <div class="column">
+                                        <img src="./images/dodge.jpg" alt="Nature">
+                                    </div>
                                 </td>
                                 <td>
                                     6,700,000
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('order')">View / Edit</button>
+                                    <button class="btn order" onclick="openPreview('order')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -216,7 +212,6 @@
 
                 <!-- Flagged Tab Content -->
                 <div id="Outgoing" class="tabcontent">
-                    <h3>Placed Orders</h3>
                     <table class="table">
                         <thead>
                             <tr>
@@ -238,15 +233,15 @@
                                     2018/03/10
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
-                                </td>
+                                        <div class="column">
+                                            <img src="./images/car3.jpg" alt="Nature">
+                                        </div>
+                                    </td>
                                 <td>
                                     Pending
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openModal('order1')">View / Edit</button>
+                                    <button class="btn order" onclick="openModal('order1')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -259,15 +254,15 @@
                                     2018/03/10
                                 </td>
                                 <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
-                                </td>
+                                        <div class="column">
+                                            <img src="./images/camaro.jpg" alt="Nature">
+                                        </div>
+                                    </td>
                                 <td>
                                     Rejected
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openModal('order2')">View / Edit</button>
+                                    <button class="btn order" onclick="openModal('order2')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -276,7 +271,6 @@
 
                 <!-- Profile Tab Content -->
                 <div id="Profile" class="tabcontent">
-                    <h3>Change Password</h3>
                     <div id="reset-form">
                         <form>
                             <label for="cPassword">Current Password</label>
@@ -375,7 +369,7 @@
                             <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
                             <button type="submit" class="btn delete" id=""
                                 onclick="openPreview('deleteCar')">DELETE</button>
-                            <button type="submit" class="btn orange" id="" onclick="openPreview('')">EDIT</button>
+                            <button type="submit" class="btn orange" id="" onclick="openPreview('post')">EDIT</button>
                         </div>
                     </div>
                 </div>
