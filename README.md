@@ -2,11 +2,11 @@
 Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With
 Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers
 
-##Getting Started 
+## Getting Started 
 This Repo contains The User Interface of the page hosted on GitHub Pages which can be 
 accessed using the link  [AutoMart Front End](https://willywax.github.io/AutoMart/UI/index.html)
 
-###Links to Dashboard
+### Links to Dashboard
 * <B>Admin DashBoard</B>     https://willywax.github.io/AutoMart/UI/admin_account.html)
 * <B>User Dashboard</B>  https://willywax.github.io/AutoMart/UI/user_account.html)
 
@@ -17,7 +17,7 @@ accessed using the link  [AutoMart Front End](https://willywax.github.io/AutoMar
 * [Plain JavaScript]()
 * Framework or Template Used
 
-###Required Features(Pages)
+### Required Features(Pages)
 - [x] User can sign up
 - [x] User can sign in.
 - [x] User (seller) can post a car sale advertisement.
