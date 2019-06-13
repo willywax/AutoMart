@@ -13,16 +13,17 @@
             <img class="user" src="./images/logo.png">
         </a>
         <h3>Sign In </h3>
-        <form>
+        <form name="form">
             <div class="inputbox">
-                <input type="email" name="" placeholder="Enter Email">
+                <input type="email" name="" id="email" placeholder="Enter Email" required>
             </div>
             <div class="inputbox">
-                <input type="password" name="" placeholder="Enter password">
+                <input type="password" name="" id="password" placeholder="Enter password" required>
             </div>
-            <a href="./logged_in.html">
+            <a href="./admin_account.html">
                 <button type="button" id="logInBtn">LOGIN</button>
             </a>
+               
         </form>
         <ul>
             <li>Forgot <a href="#">Username/ Password</a></li>
@@ -30,5 +31,23 @@
         </ul>
     </div>
 </body>
+<script>
+   const form = document.querySelector('form')
+    form.addEventListener('submit', evt => {
+    evt.preventDefault()
+    var email = document.getElementById('email');
+    if(email.value === 'admin@automart.com'){
+        alert('Admin')
+        window.location.href = window.location.href('./admin_account.html');
+    }else if(email.value === 'user@automart.com'){
+        alert('User')
+        document.location('./index.html');
+    }else {
+        alert('Incorrect Details');
+    }
+    //alert(email.value);
 
+    // Validate input
+    })
+</script>
 </html>
