@@ -179,7 +179,7 @@ header img {
     display: none;
 }
 
-select {
+#dropdown-content select {
     width: 100%;
     border: none;
     height: 50px;
@@ -379,7 +379,7 @@ nav a:hover {
         left: 10px;
         box-shadow: 0 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
-    select {
+    #dropdown-content select {
         width: 31%;
         border: none;
         height: 40px;

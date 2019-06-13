@@ -2,34 +2,36 @@ var previewModal = document.getElementById('previewModal');
 var orderModal = document.getElementById('orderModal');
 var flagModal = document.getElementById('flagModal');
 var submitOrderModal = document.getElementById('submitOrderModal');
+var userModal = document.getElementById('userModal');
+var deleteCarModal = document.getElementById('deleteCarModal')
+
 
 var previewBtn = document.getElementById('previewBtn');
 
 var cancelBtn = document.getElementById('cancelBtn');
 
-var orderBtn = document.getElementById('orderBtn');
+//var orderBtn = document.getElementById('orderBtn');
 
-var orderModalCloseBtn = document.getElementsByClassName('close')[1];
-var previewModalCloseBtn = document.getElementsByClassName('close')[0];
+var closeBtn = document.getElementsByClassName('close')[0];
 
-previewModalCloseBtn.onclick = function () {
+closeBtn.onclick = function () {
     previewModal.style.display = "none";
 }
 
-orderModalCloseBtn.onclick = function () {
-    orderModal.style.display = "none";
-}
+
+
+
 
 //Order MOdal Pop Up
-orderBtn.addEventListener('click', function () {
-    previewModal.style.display = "none";
-    orderModal.style.display = "block";
-});
+// orderBtn.addEventListener('click', function () {
+//     previewModal.style.display = "none";
+//     orderModal.style.display = "block";
+// });
 
 // Function to close Modal
 function closeModal(type) {
     //Handling optional parameter
-    type = typeof type=='undefined' ? 'none' : type;
+    type = typeof type == 'undefined' ? 'none' : type;
     if (type === 'preview')
         previewModal.style.display = "none";
     else if (type === 'order')
@@ -38,18 +40,25 @@ function closeModal(type) {
         flagModal.style.display = "none";
     else if (type === 'submitOrder')
         submitOrderModal.style.display = "none";
+    else if (type === 'user')
+        userModal.style.display = "none";
+    else if (type === 'deleteCar')
+        deleteCarModal.style.display = "none";
     else {
         previewModal.style.display = "none";
         orderModal.style.display = "none";
         flagModal.style.display = "none";
         submitOrderModal.style.display = "none";
+        userModal.style.display = "none";
+        deleteCarModal.style.display = "none";
+
     }
 
 }
 
 //Function to Open ANy Modal
 function openPreview(type) {
-    //  alert('Clicker');
+    //alert('Clicker');
     if (type === 'preview')
         previewModal.style.display = "block";
     if (type === 'order')
@@ -58,6 +67,10 @@ function openPreview(type) {
         flagModal.style.display = "block";
     if (type === 'submitOrder')
         submitOrderModal.style.display = "block";
+    if (type === 'user')
+        userModal.style.display = "block";
+    if (type === 'deleteCar')
+        deleteCarModal.style.display = "block";
 }
 
 //Confrimation Alert

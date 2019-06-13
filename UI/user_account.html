@@ -47,89 +47,14 @@
         <main class="main flex-column">
             <div id="content" class="flex-column">
                 <div class="tab">
-                    <button class="tablinks active" onclick="openCity(event, 'Users')">Users</button>
-                    <button class="tablinks" onclick="openCity(event, 'Cars')">Cars</button>
-                    <button class="tablinks" onclick="openCity(event, 'FlaggedCars')">Flagged Cars</button>
+                    <button class="tablinks active" onclick="openCity(event, 'MyAds')">My Ads</button>
+                    <button class="tablinks" onclick="openCity(event, 'Incomming')">Incomming Orders</button>
+                    <button class="tablinks" onclick="openCity(event, 'Outgoing')">Outgoing Orders</button>
                     <button class="tablinks" onclick="openCity(event, 'Profile')">Settings</button>
                 </div>
 
                 <!-- Tab content -->
-                <div id="Users" class="tabcontent">
-                    <h3>Users</h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>UserId</th>
-                                <th>Email Address</th>
-                                <th>Role</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
-                                </td>
-                                <td>
-                                    William@stations.com
-                                </td>
-                                <td>
-                                    Admin
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    <button class="btn" onclick="openPreview('user')">View / Edit</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
-                                </td>
-                                <td>
-                                    Gikondo@stations.com
-                                </td>
-                                <td>
-                                    User
-                                </td>
-                                <td>
-                                    Active
-                                </td>
-                                <td>
-                                    <button class="btn" onclick="openPreview('user')">View / Edit</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#">
-                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
-                                    </a>
-                                </td>
-                                <td>
-                                    jane@stations.com
-                                </td>
-                                <td>
-                                    User
-                                </td>
-                                <td>
-                                    Disabled
-                                </td>
-                                <td>
-                                    <button class="btn" onclick="openPreview('user')">View / Edit</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Cars Tab Content -->
-                <div id="Cars" class="tabcontent">
+                <div id="MyAds" class="tabcontent">
                     <h3>Cars Ads</h3>
                     <table class="table">
                         <thead>
@@ -209,16 +134,16 @@
                     </table>
                 </div>
 
-                <!-- Flagged Tab Content -->
-                <div id="FlaggedCars" class="tabcontent">
-                    <h3>Flagged Cars</h3>
+                <!-- Cars Tab Content -->
+                <div id="Incomming" class="tabcontent">
+                    <h3>Received Orders</h3>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Car Ad Id</th>
-                                <th>Flag Date</th>
-                                <th>Flagged By</th>
-                                <th>Flag Type</th>
+                                <th>Order Id</th>
+                                <th>Date</th>
+                                <th>Car Id</th>
+                                <th>Price</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -230,7 +155,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    2018/03/15
+                                    2018/03/10
                                 </td>
                                 <td>
                                     <a href="#">
@@ -238,10 +163,10 @@
                                     </a>
                                 </td>
                                 <td>
-                                    Description
+                                    12,000,000
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('flag')">View / Edit</button>
+                                    <button class="btn" onclick="openPreview('order')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -259,10 +184,10 @@
                                     </a>
                                 </td>
                                 <td>
-                                    Other
+                                    11,000,000
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('flag')">View / Edit</button>
+                                    <button class="btn" onclick="openPreview('order')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -272,7 +197,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    2018/04/18
+                                    2018/04/12
                                 </td>
                                 <td>
                                     <a href="#">
@@ -280,15 +205,74 @@
                                     </a>
                                 </td>
                                 <td>
-                                    Ad Content
+                                    6,700,000
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('flag')">View / Edit</button>
+                                    <button class="btn" onclick="openPreview('order')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                </div>
 
+                <!-- Flagged Tab Content -->
+                <div id="Outgoing" class="tabcontent">
+                    <h3>Placed Orders</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Order Id</th>
+                                <th>Date</th>
+                                <th>Car Id</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/03/10
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Pending
+                                </td>
+                                <td>
+                                    <button class="btn" onclick="openModal('order1')">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/03/10
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Rejected
+                                </td>
+                                <td>
+                                    <button class="btn" onclick="openModal('order2')">View / Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
                 <!-- Profile Tab Content -->
@@ -390,15 +374,16 @@
                         </section>
                         <div class="form-buttons">
                             <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
-                            <!-- <button type="submit" class="btn danger" onclick="flagCar()">FLAG</button> -->
                             <button type="submit" class="btn delete" id=""
                                 onclick="openPreview('deleteCar')">DELETE</button>
+                            <button type="submit" class="btn orange" id=""
+                                onclick="openPreview('')">EDIT</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- OrderModal-->
+            <!-- OrderModal Incomming-->
             <div id="orderModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-header orange">
@@ -437,8 +422,13 @@
                                 <label class="label">Order status</label>
                             </div>
                             <div class="form-group">
-                                <input type="text" name="date" placeholder="Order Date">
-                                <input type="text" name="status" placeholder="Order Status">
+                                <input type="text" name="date" placeholder="Order Date" value="2019/10/10" disabled>
+                                <select>
+                                        <option value=""  selected>Pending</option>
+                                        <option value="new">Accepted</option>
+                                        <option value="new">Rejected</option>
+                                        <option value="new">Pending</option>
+                                    </select>
                             </div>
                             <div class="form-label">
                                 <label class="label">Car Name</label>
@@ -454,12 +444,147 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" name="car_price" placeholder="Car Price" value="15,000,000" disabled>
-                                <input type="text" name="amount" placeholder="Amount to Bid">
+                                <input type="text" name="amount" placeholder="Amount to Bid" value="13,000,000" disabled>
                             </div>
                         </section>
                         <div class="form-buttons">
                             <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
-                            <button type="submit" class="btn order" onclick="openPreview('submitOrder')">ORDER</button>
+                            <button type="submit" class="btn order" onclick="openPreview('submitOrder')">UPDATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OrderModal OutGoing Status Pending-->
+            <div id="orderModal1" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header orange">
+                        <span class="modal-title">Order Details</span>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="main-cards">
+                        <section>
+                            <div class="image-container">
+                                <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
+                                <img id="expandedImg" src="./images/camaro.jpg" alt="Cool Car">
+                                <div id="imageText">
+                                    Cool Cars
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
+                                </div>
+                                <div class="column">
+                                    <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
+                                </div>
+                                <div class="column">
+                                    <img src="./images/car3.jpg" alt="Nature" onclick="myFunction(this);">
+                                </div>
+
+                            </div>
+
+                        </section>
+                        <section>
+                            <div class="section-header">
+                                <h3>Order Summary</h3>
+                            </div>
+                            <div class="form-label">
+                                <label class="label">Order Date</label>
+                                <label class="label">Order status</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="date" placeholder="Order Date" value="2019/02/12" disabled>
+                                <input type="text" name="status" placeholder="Order Status" value="Pending" disabled>
+                            </div>
+                            <div class="form-label">
+                                <label class="label">Car Name</label>
+                                <label class="label">Buyer Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="car" placeholder="Car Name" value="BMW X6" disabled>
+                                <input type="text" name="buyer" placeholder="Buyers Name" value="WILLIAM" disabled>
+                            </div>
+                            <div class="form-label">
+                                <label class="label">Car Price</label>
+                                <label class="label">Bid Price</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="car_price" placeholder="Car Price" value="15,000,000" disabled>
+                                <input type="text" name="amount" placeholder="Amount to Bid" value="12,000,000">
+                            </div>
+                        </section>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn cancel" onclick="closeOrderModal()">CANCEL</button>
+                            <button type="submit" class="btn order"
+                                onclick="alertOrder('Order Updated')">UPDATE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OrderModal OutGoing Status Rejected-->
+            <div id="orderModal2" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header orange">
+                        <span class="modal-title">Order Details</span>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="main-cards">
+                        <section>
+                            <div class="image-container">
+                                <span onclick="this.parentElement.style.display='none'" class="close-btn">&times;</span>
+                                <img id="expandedImg" src="./images/camaro.jpg" alt="Cool Car">
+                                <div id="imageText">
+                                    Cool Cars
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="column">
+                                    <img src="./images/dodge.jpg" alt="Nature" onclick="myFunction(this);">
+                                </div>
+                                <div class="column">
+                                    <img src="./images/camaro.jpg" alt="Snow" onclick="myFunction(this);">
+                                </div>
+                                <div class="column">
+                                    <img src="./images/car3.jpg" alt="Nature" onclick="myFunction(this);">
+                                </div>
+
+                            </div>
+
+                        </section>
+                        <section>
+                            <div class="section-header">
+                                <h3>Order Summary</h3>
+                            </div>
+                            <div class="form-label">
+                                <label class="label">Order Date</label>
+                                <label class="label">Order status</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="date" placeholder="Order Date" value="2019/03/10" disabled>
+                                <input type="text" name="status" placeholder="Order Status" value="Rejected" disabled>
+                            </div>
+                            <div class="form-label">
+                                <label class="label">Car Name</label>
+                                <label class="label">Buyer Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="car" placeholder="Car Name" value="BMW X6" disabled>
+                                <input type="text" name="buyer" placeholder="Buyers Name" value="WILLIAM" disabled>
+                            </div>
+                            <div class="form-label">
+                                <label class="label">Car Price</label>
+                                <label class="label">Bid Price</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="car_price" placeholder="Car Price" value="15,000,000" disabled>
+                                <input type="text" name="amount" placeholder="Amount to Bid" value="13,000,000"
+                                    disabled>
+                            </div>
+                        </section>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn cancel" onclick="closeOrderModal()">CANCEL</button>
                         </div>
                     </div>
                 </div>
@@ -568,9 +693,9 @@
 
                         </section>
                         <div class="form-buttons">
-                                <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
-                            <button type="submit" class="btn delete" id=""
-                            onclick="openPreview('deleteCar')">DELETE CAR</button>
+                            <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
+                            <button type="submit" class="btn delete" id="" onclick="openPreview('deleteCar')">DELETE
+                                CAR</button>
                             <button type="submit" class="btn danger" name="" id=""
                                 onclick="alertBox('Car Ad UnFlagged')">UNFLAG</button>
                         </div>
@@ -581,7 +706,7 @@
             <!-- Submit Order Modal-->
             <div id="submitOrderModal" class="modal">
                 <div class="modal-content confirm-content">
-                    <div class="modal-header">
+                    <div class="modal-header orange">
                         <span class="modal-title">Order Confirmation</span>
                         <span class="close">&times;</span>
                     </div>
@@ -622,7 +747,10 @@
         var tb_content = document.getElementsByClassName('tabcontent')[0];
         var tb_link = document.getElementsByClassName('tablinks')[0];
 
-        document.getElementById('Users').style.display = "block";
+        var orderModal1 = document.getElementById('orderModal1')
+        var orderModal2 = document.getElementById('orderModal2')
+
+        document.getElementById('MyAds').style.display = "block";
         tb_link.classList.add('active');
 
         function openCity(evt, citiName) {
@@ -641,6 +769,34 @@
             document.getElementById(citiName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        function openModal(type) {
+            //alert('Clicker');
+            if (type === 'order1')
+                orderModal1.style.display = "block";
+            if (type === 'order2')
+                orderModal2.style.display = "block";
+        }
+
+        function closeOrderModal(type) {
+            type = typeof type == 'undefined' ? 'none' : type;
+            if (type === 'order1')
+                orderModal1.style.display = "none";
+            else if (type === 'order2')
+                orderModal2.style.display = "none";
+            else {
+                orderModal1.style.display = "none";
+                orderModal2.style.display = "none";
+            }
+
+        }
+
+        function alertOrder(text) {
+            alert(text);
+            closeOrderModal();
+        }
+
+
 
 
     </script>
