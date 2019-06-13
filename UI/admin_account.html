@@ -46,16 +46,18 @@
         </header>
         <main class="main flex-column">
             <div id="content" class="flex-column">
+                    <div>
+                            <h4>Admin Dashboard</h4>
+                        </div>
                 <div class="tab">
                     <button class="tablinks active" onclick="openCity(event, 'Users')">Users</button>
                     <button class="tablinks" onclick="openCity(event, 'Cars')">Cars</button>
                     <button class="tablinks" onclick="openCity(event, 'FlaggedCars')">Flagged Cars</button>
-                    <button class="tablinks" onclick="openCity(event, 'Profile')">Settings</button>
+                    <button class="tablinks" onclick="openCity(event, 'Profile')">Profiles</button>
                 </div>
 
                 <!-- Tab content -->
                 <div id="Users" class="tabcontent">
-                    <h3>Users</h3>
                     <table class="table">
                         <thead>
                             <tr>
@@ -83,7 +85,7 @@
                                     Active
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('user')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('user')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -102,7 +104,7 @@
                                     Active
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('user')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('user')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -121,7 +123,7 @@
                                     Disabled
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('user')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('user')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -130,7 +132,6 @@
 
                 <!-- Cars Tab Content -->
                 <div id="Cars" class="tabcontent">
-                    <h3>Cars Ads</h3>
                     <table class="table">
                         <thead>
                             <tr>
@@ -160,7 +161,7 @@
                                     Available
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('preview')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('preview')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -181,7 +182,7 @@
                                     Sold
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('preview')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('preview')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -202,7 +203,7 @@
                                     Available
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('preview')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('preview')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -211,7 +212,6 @@
 
                 <!-- Flagged Tab Content -->
                 <div id="FlaggedCars" class="tabcontent">
-                    <h3>Flagged Cars</h3>
                     <table class="table">
                         <thead>
                             <tr>
@@ -241,7 +241,7 @@
                                     Description
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('flag')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('flag')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -262,7 +262,7 @@
                                     Other
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('flag')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('flag')">View / Edit</button>
                                 </td>
                             </tr>
                             <tr>
@@ -283,7 +283,7 @@
                                     Ad Content
                                 </td>
                                 <td>
-                                    <button class="btn" onclick="openPreview('flag')">View / Edit</button>
+                                    <button class="btn orange" onclick="openPreview('flag')">View / Edit</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -293,7 +293,6 @@
 
                 <!-- Profile Tab Content -->
                 <div id="Profile" class="tabcontent">
-                    <h3>Change Password</h3>
                     <div id="reset-form">
                         <form>
                             <label for="cPassword">Current Password</label>
