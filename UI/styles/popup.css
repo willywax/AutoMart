@@ -116,13 +116,29 @@ section:nth-child(2) {
 }
 
 .cancel:hover {
-    background-color: orange;
+    background-color: #929292
+}
+
+.delete {
+    background: rgba(165,5,5,1);
+}
+
+.delete:hover {
+    background: rgb(68, 4, 4);
 }
 
 .order {
     background: rgb(243, 74, 11);
     color: white;
-    cursor: pointer;
+}
+
+.order:hover {
+    background-color: rgb(214, 61, 5);
+}
+
+.orange {
+    background: rgb(243, 74, 11);
+    color: white;
 }
 
 
@@ -145,7 +161,6 @@ section:nth-child(2) {
 }
 
 .modal-header {
-    background: rgb(243, 74, 11);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -171,7 +186,7 @@ section:nth-child(2) {
 
 .close {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 35px;
     color: white;
 }
 
@@ -186,6 +201,20 @@ section:nth-child(2) {
     display: flex;
     flex-direction: row-reverse;
     margin: 15px 25px 0px 0px;
+}
+
+/**Dialog Box Modal **/
+.confirm-content {
+    width: 30%;
+    text-align: center
+}
+
+.confirm {
+    padding: 10px;
+}
+
+.confirm-content .modal-header .close {
+    font-size: 50px;
 }
 
 
@@ -217,6 +246,7 @@ section:nth-child(2) {
     .main-cards {
         width: 100%;
         margin: 0 auto;
+        padding: 15px;
     }
     .data-forms {
         display: inline-block;
@@ -231,6 +261,13 @@ section:nth-child(2) {
     #price {
         text-align: left;
     }
+
+    #owner {
+        text-align: right;
+        color: black;
+        margin-left: 60px;
+    }
+
     #expandedImg {
         width: 100%;
         margin: 0 auto;
