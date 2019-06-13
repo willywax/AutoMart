@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./styles/account.css" type="text/css" rel="stylesheet">
+    <link href="./styles/popup.css" type="text/css" rel="stylesheet">
+    <link href="./styles/table.css" type="text/css" rel="stylesheet">
+    <link href="./styles/form.css" type="text/css" rel="stylesheet">
+
+    <title>Index</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <a href="./logged_in.html">
+                <img src="./images/logo.png">
+            </a>
+            <nav>
+                <div id="nav-button">
+                    <button id="navBtn" class="dropdown">
+                        WILLIAM <span><img src="./images/down.svg" alt=""></span>
+                    </button>
+                </div>
+                <div id="nav-content" class="hide">
+                    <ul>
+                        <li>
+                            <a href="./post_car.html">
+                                POST AD
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./admin_account.html">WILLIAM</a>
+                            <!-- <span>|</span> -->
+                        </li>
+                        <li>
+                            <a href="./signin.html">LOG OUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="main flex-column">
+            <div id="content" class="flex-column">
+                <div class="tab">
+                    <button class="tablinks active" onclick="openCity(event, 'Users')">Users</button>
+                    <button class="tablinks" onclick="openCity(event, 'Cars')">Cars</button>
+                    <button class="tablinks" onclick="openCity(event, 'FlaggedCars')">Flagged Cars</button>
+                    <button class="tablinks" onclick="openCity(event, 'Profile')">Settings</button>
+                </div>
+
+                <!-- Tab content -->
+                <div id="Users" class="tabcontent">
+                    <h3>Users</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>UserId</th>
+                                <th>Email Address</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    William@stations.com
+                                </td>
+                                <td>
+                                    Admin
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Gikondo@stations.com
+                                </td>
+                                <td>
+                                    User
+                                </td>
+                                <td>
+                                    Active
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    jane@stations.com
+                                </td>
+                                <td>
+                                    User
+                                </td>
+                                <td>
+                                    Disabled
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="Cars" class="tabcontent">
+                    <h3>Cars Ads</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Car Ad Id</th>
+                                <th>Post Date</th>
+                                <th>Owner</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/03/10
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Available
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/03/10
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Sold
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/04/12
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Available
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="FlaggedCars" class="tabcontent">
+                    <h3>Flagged Cars</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Car Ad Id</th>
+                                <th>Flag Date</th>
+                                <th>Flagged By</th>
+                                <th>Flag Type</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/03/15
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Description
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/03/10
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Other
+                                </td>
+                                <td>
+                                    <button class="btn">View / Edit</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    2018/04/18
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        0fa97d01-d64a-4dcd-8979-5ad86906c083
+                                    </a>
+                                </td>
+                                <td>
+                                    Ad Content
+                                </td>
+                                <td>
+                                    <button class="btn" onclick="viewFlag()">View / Edit</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="Profile" class="tabcontent">
+                    <h3>Change Password</h3>
+                    <div id="reset-form">
+                        <form>
+                            <label for="cPassword">Current Password</label>
+                            <input type="password" id="cPassword" name="current" placeholder="Enter Current Password">
+                            <label for="nPassword">New Password</label>
+                            <input type="password" id="nPassword" name="password" placeholder="Enter New Password">
+                            <label for="confirmPassword">Current Password</label>
+                            <input type="password" id="confirmPassword" name="confirm"
+                                placeholder="Confirm New Password">
+
+                            <button type="submit" class="btn">UPDATE</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+        <!-- <footer class="footer"></footer> -->
+    </div>
+    <script src="./js/dropdown.js"></script>
+
+    <script>
+        var tb_content = document.getElementsByClassName('tabcontent')[0];
+        var tb_link = document.getElementsByClassName('tablinks')[0];
+
+        document.getElementById('Users').style.display = "block";
+        tb_link.classList.add('active');
+
+        function openCity(evt, citiName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName('tabcontent');
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName('tablinks');
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(citiName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+
+    </script>
+</body>
+
+<script src="./js/modal.js"></script>
+
+</html>
