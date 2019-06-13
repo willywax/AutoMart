@@ -12,10 +12,13 @@
 
     <title>Index</title>
 </head>
+
 <body>
     <div class="grid-container">
         <header class="header">
-            <img src="./images/logo.png">
+            <a href="./index.html">
+                <img src="./images/logo.png">
+            </a>
             <nav>
                 <div id="nav-button">
                     <img src="./images/bars-solid.svg">
@@ -23,9 +26,9 @@
                 <div id="nav-content" class="hide">
                     <ul>
                         <li>
-                            <a href="./post_car.html">
+                            <button onclick="logInPage('Create Ad')" class="btn order">
                                 POST AD
-                            </a>
+                            </button>
                         </li>
                         <li>
                             <a href="./signin.html">SIGN IN</a>
@@ -95,7 +98,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -114,7 +117,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -133,7 +136,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -152,7 +155,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -171,7 +174,7 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
                 <div class="card">
@@ -190,13 +193,13 @@
                         </p>
                     </div>
                     <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="previewBtn">PREVIEW</button>
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
                     </div>
                 </div>
             </div>
             <div id="previewModal" class="modal">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header orange">
                         <span class="modal-title">Car Preview</span>
                         <span class="close">&times;</span>
                     </div>
@@ -226,9 +229,13 @@
                         <section>
                             <div class="section-header">
                                 <h3>Details</h3>
+                                <div class="data-forms">
+                                    <span id="price">TZS 15,000,000</span>
+                                    <span id="owner"><strong>Post By: </strong><em> Axe Mobiles</em></span>
+                                </div>
                                 <p class="text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s
                                 </p>
                             </div>
                             <div class="details">
@@ -266,14 +273,10 @@
                                 </div>
                             </div>
                         </section>
-                        <section>
-                            <div class="data-forms">
-                                <span id="price">TZS 15,000,000</span>
-                            </div>
-                        </section>
-                        <div class="form-buttons">
-                            <input type="submit" class="btn cancel" name="" id="cancelBtn" value="CANCEL">
-                            <input type="submit" class="btn danger" name="" id="reportBtn" value="FLAG">
+                        <div>
+                            <button type="submit" class="btn order" onclick="logInPage('Create Order')">ORDER</button>
+                            <button type="submit" class="btn danger" onclick="logInPage('Flag Ad')">FLAG</button>
+                            <button type="submit" class="btn cancel" onclick="closeModal()">CANCEL</button>
                         </div>
                     </div>
                 </div>
@@ -288,29 +291,38 @@
 
 <script>
     var previewModal = document.getElementById('previewModal');
-    
+
+    var orderModal = document.getElementById('orderModal');
+
     var previewBtn = document.getElementById('previewBtn');
     var cancelBtn = document.getElementById('cancelBtn');
 
-   
-    previewBtn.addEventListener('click', function () {
-        previewModal.style.display = "block";
-    });
 
-    
+    // previewBtn.addEventListener('click', function () {
+    //     previewModal.style.display = "block";
+    // });
+
+    function openPreview() {
+        previewModal.style.display = 'block';
+    }
+    function closeModal() {
+        previewModal.style.display = 'none';
+    }
+    function logInPage(value) {
+        alert('You need to be logged In to ' + value);
+    }
+
     var closeBtn = document.getElementsByClassName('close')[0];
 
     closeBtn.onclick = function () {
         previewModal.style.display = "none";
     }
 
-    cancelBtn.onclick = function () {
-        previewModal.style.display = "none";
-    }
 
     window.onclick = function (event) {
-        if (event.target === previewModal || event.target === orderModal) {
-            previewModal.style.display = "none";
+        //alert(previewModal.style.display);
+        if (previewModal.style.display === 'block') {
+            //previewModal.style.display = "none";
         }
     }
 
