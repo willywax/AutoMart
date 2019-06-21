@@ -9,6 +9,8 @@
     <link href="./styles/popup.css" type="text/css" rel="stylesheet">
     <link href="./styles/gallery.css" type="text/css" rel="stylesheet">
 
+   
+
 
     <title>Index</title>
 </head>
@@ -42,7 +44,7 @@
         </header>
         <main class="main flex-column">
             <div id="filters">
-                <button id="filterBtn" class="dropdown">
+                <button id="filterBtn" onclick="closeFilter()" class="dropdown">
                     Filters <span><img src="./images/down.svg" alt=""></span>
                 </button>
                 <div id="dropdown-content" class="hide">
@@ -76,7 +78,7 @@
                             <option value="new">Van</option>
                         </select>
                     </div>
-                    <button class="theme-color-btn btn">
+                    <button class="theme-color-btn btn" onclick="closeFilter()">
                         SEARCH
                     </button>
                 </div>
@@ -141,25 +143,6 @@
                 </div>
                 <div class="card">
                     <div class="card-img">
-                        <img src="./images/camaro.jpg">
-                    </div>
-                    <div class="card-label flex-row">
-                        <h3>BMW 3SERIES V8</h3>
-                        <span class="price theme-color">$4,400</span>
-                    </div>
-                    <div class="card-description">
-                        <hr>
-                        <p>
-                            Next level Pinterest farm-to-table selvage gentrify street art raw denim Helvetica street
-                            art pork belly.
-                        </p>
-                    </div>
-                    <div class="card-button flex-row">
-                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img">
                         <img src="./images/car2.jpeg">
                     </div>
                     <div class="card-label flex-row">
@@ -180,6 +163,25 @@
                 <div class="card">
                     <div class="card-img">
                         <img src="./images/car3.jpg">
+                    </div>
+                    <div class="card-label flex-row">
+                        <h3>BMW 3SERIES V8</h3>
+                        <span class="price theme-color">$4,400</span>
+                    </div>
+                    <div class="card-description">
+                        <hr>
+                        <p>
+                            Next level Pinterest farm-to-table selvage gentrify street art raw denim Helvetica street
+                            art pork belly.
+                        </p>
+                    </div>
+                    <div class="card-button flex-row">
+                        <button class="theme-color-btn btn" id="" onclick="openPreview()">PREVIEW</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <img src="./images/camaro.jpg">
                     </div>
                     <div class="card-label flex-row">
                         <h3>BMW 3SERIES V8</h3>
@@ -282,6 +284,7 @@
                 </div>
             </div>
         </main>
+        
     </div>
     <script src="./js/dropdown.js"></script>
 
@@ -315,9 +318,7 @@
     }
 
 
-    window.onclick = function (event) {
     
-    }
 
 </script>
 

@@ -56,6 +56,7 @@ function closeModal(type) {
 
 //Function to Open ANy Modal
 function openPreview(type) {
+    document.getElementById('alert-box').style.display="none";
     //alert('Clicker');
     if (type === 'preview')
         previewModal.style.display = "block";
@@ -77,7 +78,13 @@ function openPreview(type) {
 
 //Confrimation Alert
 function alertBox(text) {
-    alert(text);
+    //document.getElementById('alert-box').style.display="block";
+    let alert = document.getElementById('alert-box');
+    alert.style.display = "block";
+    alert.classList.toggle('fade');
+    document.getElementById('alert-text').innerHTML = text;
+
+
     closeModal();
 }
 

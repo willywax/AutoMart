@@ -10,6 +10,8 @@
     <link href="./styles/gallery.css" type="text/css" rel="stylesheet">
     <link href="./styles/form.css" type="text/css" rel="stylesheet">
 
+    <link href="./styles/alert.css" type="text/css" rel="stylesheet">
+
     <title>Index</title>
 </head>
 
@@ -290,7 +292,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Order Details</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeModal()">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -355,7 +357,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Flag Car Ad</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeModal('flag')">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -404,7 +406,7 @@
                 <div class="modal-content confirm-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Order Confirmation</span>
-                        <span class="close">&times;</span>
+                        <span class="close"  onclick="closeModal('submitOrder')" >&times;</span>
                     </div>
                     <div class="confirm">
                         <h2>Submit Order </h2>
@@ -500,7 +502,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Post Car</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeModal()">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -579,7 +581,7 @@
                 <div class="modal-content confirm-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Post Confirmation</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeModal('submitPost')" >&times;</span>
                     </div>
                     <div class="confirm">
                         <h2>Submit Post </h2>
@@ -591,8 +593,11 @@
                     </div>
                 </div>
             </div>
-
         </main>
+        <div class="alert" id="alert-box">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <span id="alert-text">Indicates a dangerous or potentially negative action.</span>
+              </div>
     </div>
     <script src="./js/dropdown.js"></script>
     <script src="./js/gallery.js"></script>
