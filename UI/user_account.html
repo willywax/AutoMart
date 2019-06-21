@@ -11,6 +11,8 @@
     <link href="./styles/form.css" type="text/css" rel="stylesheet">
     <link href="./styles/gallery.css" type="text/css" rel="stylesheet">
 
+    <link href="./styles/alert.css" type="text/css" rel="stylesheet">
+
     <title>Index</title>
 </head>
 
@@ -135,9 +137,9 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Order Id</th>
+                                <th>Order Number</th>
                                 <th>Date</th>
-                                <th>Car Id</th>
+                                <th>Car</th>
                                 <th>Price</th>
                                 <th>Action</th>
                             </tr>
@@ -215,9 +217,9 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>Order Id</th>
+                                <th>Order Number</th>
                                 <th>Date</th>
-                                <th>Car Id</th>
+                                <th>Car </th>
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
@@ -380,7 +382,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Order Details</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeModal()">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -453,7 +455,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Order Details</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeOrderModal()">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -521,7 +523,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Order Details</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeOrderModal()">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -737,7 +739,7 @@
                 <div class="modal-content">
                     <div class="modal-header orange">
                         <span class="modal-title">Post Car</span>
-                        <span class="close">&times;</span>
+                        <span class="close" onclick="closeModal()">&times;</span>
                     </div>
                     <div class="main-cards">
                         <section>
@@ -829,9 +831,15 @@
                 </div>
             </div>
         </main>
+        <div class="alert" id="alert-box">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <span id="alert-text">Indicates a dangerous or potentially negative action.</span>
+          </div>
         <!-- <footer class="footer"></footer> -->
     </div>
     <script src="./js/dropdown.js"></script>
+
+    <script src="./js/gallery.js"></script>
 
     <script>
         var tb_content = document.getElementsByClassName('tabcontent')[0];
@@ -882,7 +890,9 @@
         }
 
         function alertOrder(text) {
-            alert(text);
+            //alert(text);
+            document.getElementById('alert-box').style.display="block";
+            document.getElementById('alert-text').innerHTML = text;
             closeOrderModal();
         }
 

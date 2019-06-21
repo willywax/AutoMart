@@ -1,8 +1,10 @@
 var filterBtn = document.getElementById('filterBtn');
-//filterBtn.onclick =
+var dropdown = document.getElementById('dropdown-content');
+
+//filterBtn.onclick = closeFilter();
 
 function closeFilter() {
-    var dropdown = document.getElementById('dropdown-content');
+    
     if (dropdown.classList.contains('show')) {
         dropdown.classList.remove('show');
         dropdown.classList.add('hide');
