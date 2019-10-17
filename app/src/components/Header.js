@@ -1,17 +1,26 @@
 import React from 'react';
-import Nav from '../components/Nav';
-import Logo from '../images/logo.png';
+import { Link } from "react-router-dom";
+import LogoImage from '../images/logo.png';
+import '../styles/header.scss';
 
-function Header(){
+import LandingNav from './LandingNav';
+import { Grid } from '@material-ui/core';
+
+
+function Header() {
     return (
-        <header className="header">
-            <a href="./index.html">
-                <img src={Logo} alt="Logo" />
-            </a>
-            <Nav />
-
-        </header>
-    )
+        <Grid container alignContent='center' className='header'>
+            <Grid item xs={8}>
+                <Link to="/" exact>
+                    <img alt="Logo" src={LogoImage} />
+                </Link>
+            </Grid>
+            <Grid item xs={4}>
+                <LandingNav />
+            </Grid>
+        </Grid>
+    );
 }
+
 
 export default Header;
