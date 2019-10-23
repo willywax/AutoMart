@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Button, Grid } from '@material-ui/core';
 import { makeStyles } from "@material-ui/core/styles";
-import { orange } from "@material-ui/core/colors";
 import '../styles/header.scss';
 
 const useStyles = makeStyles(theme => ({
